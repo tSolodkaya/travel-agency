@@ -5,6 +5,480 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travellian</title>
     <link rel="stylesheet" href="./dist/css/main.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;800;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <a href="/">
+        <svg width="234" height="45">
+          <use></use>
+        </svg>
+      </a>
+
+      <nav>
+        <ul class="li">
+          <a href="#">Home</a>
+        </ul>
+        <ul class="li">
+          <a href="#">Explore</a>
+        </ul>
+        <ul class="li">
+          <a href="#">Travel</a>
+        </ul>
+        <ul class="li">
+          <a href="#">Blog</a>
+        </ul>
+        <ul class="li">
+          <a href="#">Pricing</a>
+        </ul>
+      </nav>
+
+      <div role="authentification">
+        <a href="#">Login</a>
+        <a href="#">Sign up</a>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1>
+          Start your unforgettable <br />
+          journey with us.
+        </h1>
+        <p>The best travel for your jouney begins now</p>
+        <div>
+          <button></button><button></button><button></button><button></button
+          ><button></button><button></button><button></button>
+        </div>
+        <form>
+          <label for="destination">
+            Destination
+            <input
+              type="text"
+              id="destination"
+              name="destination"
+              placeholder="Dubai"
+            />
+          </label>
+          <label for="person-count">
+            <input
+              type="number"
+              name="person-count"
+              id="person-count"
+              min="1"
+              max="100"
+            />
+          </label>
+          <label for="check-in">
+            <input type="date" name="check-in" id="check-in" />
+          </label>
+          <label for="check-out">
+            <input type="date" name="check-in" id="check-in" />
+          </label>
+          <button type="submit">
+            Book now
+            <svg width="22" height="16">
+              <use />
+            </svg>
+          </button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Popular Destinations</h2>
+        <p>
+          Most popular destinations around the world, from historical places to
+          natural wonders.
+        </p>
+        <div>
+          <button type="button">
+            <svg width="20" height="10">
+              <use />
+            </svg>
+          </button>
+          <button type="button">
+            <svg width="20" height="10">
+              <use />
+            </svg>
+          </button>
+        </div>
+        <ul>
+          <li>
+            <a href="#"><img srcset="" alt="Monument of Berlin" /></a>
+            <div>
+              <p>Monument of Berlin</p>
+              <p>Berlin, Germany</p>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img srcset="" alt="Millennium Bridge, London" /></a>
+            <div>
+              <p>Millennium Bridge</p>
+              <p>London, United Kingdom</p>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img srcset="" alt="Rialto Bridge, Italy" /></a>
+            <div>
+              <p>Rialto Bridge</p>
+              <p>Venice, Italy</p>
+            </div>
+          </li>
+          <li>
+            <a href="#"><img srcset="" alt="Sea of Orange Tiles, Lisbon" /></a>
+            <div>
+              <p>Sea of Orange Tiles</p>
+              <p>Lisbon, Portugal</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Special Offer</h2>
+        <p>Check out our special offer and discounts</p>
+        <div>
+          <button type="button">
+            <svg width="20" height="10">
+              <use />
+            </svg>
+          </button>
+          <button type="button">
+            <svg width="20" height="10">
+              <use />
+            </svg>
+          </button>
+        </div>
+
+        <ul>
+          <li>
+            <article>
+              <img src="" alt="" />
+              <h3>Lisbon, Portugal</h3>
+              <div>
+                <button></button><button></button><button></button
+                ><button></button><button></button>
+              </div>
+              <p>
+                5 nights and 4 days in 5 star hotel, breakfast and lunch
+                included. Very popular during the renaissance. Passage and going
+                through the cites of the world in classical literature.
+              </p>
+              <p>From <span>&#8364;500</span></p>
+              <a href="#">Details</a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="" alt="" />
+              <h3>Athens, Greece</h3>
+              <div>
+                <button></button><button></button><button></button
+                ><button></button><button></button>
+              </div>
+              <p>
+                5 nights and 4 days in 5 star hotel, breakfast and lunch
+                included. Very popular during the renaissance. Passage and going
+                through the cites of the world in classical literature.
+              </p>
+              <p>From <span>&#8364;800</span></p>
+              <a href="#">Details</a>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="" alt="" />
+              <h3>Lisbon, Portugal</h3>
+              <div>
+                <button></button><button></button><button></button
+                ><button></button><button></button>
+              </div>
+              <p>
+                5 nights and 4 days in 5 star hotel, breakfast and lunch
+                included. Very popular during the renaissance. Passage and going
+                through the cites of the world in classical literature.
+              </p>
+              <p>From <span>&#8364;750</span></p>
+              <a href="#">Details</a>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Our Blog</h2>
+        <p>An insight the incredible experience in the world</p>
+        <article>
+          <img src="" alt="sea, mountains in Italy" />
+          <h3>Beautiful Italy Let’s travel</h3>
+          <p>
+            color: #172432; font-family: Rubik; font-size: 24px; font-style:
+            normal; font-weight: 400; line-height: 52px; /* 216.667% */
+          </p>
+          <a href="#">Read more</a>
+        </article>
+      </section>
+
+      <section>
+        <h2>Trip Planners</h2>
+        <p>
+          20 years from now you will be more disappointed by the things that you
+          didn’t do. Stop regretting and start travelling, start throwing off
+          the bowlines.
+        </p>
+
+        <a href="#"> View all trip plans </a>
+
+        <ul>
+          <li>
+            <article>
+              <a href="#"
+                ><img src="" alt="" />
+                <p>Guided Tour <span>&#8364;99/Day</span></p>
+                <div>
+                  <button></button><button></button><button></button
+                  ><button></button><button></button>
+                </div>
+                <p>7 Days tour</p></a
+              >
+            </article>
+            <h3>City Tour</h3>
+          </li>
+          <li>
+            <article>
+              <a href="#"
+                ><img src="" alt="" />
+                <p>Guided Tour <span>&#8364;99/Day</span></p>
+                <div>
+                  <button></button><button></button><button></button
+                  ><button></button><button></button>
+                </div>
+                <p>7 Days tour</p></a
+              >
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="#"
+                ><img src="" alt="" />
+                <p>Guided Tour <span>&#8364;99/Day</span></p>
+                <div>
+                  <button></button><button></button><button></button
+                  ><button></button><button></button>
+                </div>
+                <p>7 Days tour</p></a
+              >
+            </article>
+          </li>
+          <li>
+            <article>
+              <a href="#"
+                ><img src="" alt="" />
+                <p>Guided Tour <span>&#8364;99/Day</span></p>
+                <div>
+                  <button></button><button></button><button></button
+                  ><button></button><button></button>
+                </div>
+                <p>7 Days tour</p></a
+              >
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Destination Gallery</h2>
+        <p>Our photo gallery on trip</p>
+        <div>
+          <button type="button">
+            <svg width="20" height="10">
+              <use />
+            </svg>
+          </button>
+          <button type="button">
+            <svg width="20" height="10">
+              <use />
+            </svg>
+          </button>
+        </div>
+
+        <ul>
+          <li>
+            <a href="#"><img src="" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="" alt="" /></a>
+          </li>
+          <li>
+            <a href="#"><img src="" alt="" /></a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Traveler&#39;s Experiences</h2>
+        <p>Here some awesome feedback from our travelers</p>
+        <ul>
+          <li>
+            <article>
+              <img src="" alt="" />
+              <p>
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system and expound the actual
+                teachings of the great explorer of the truth, the master-
+                builder of human happiness.
+              </p>
+              <div>
+                <button></button><button></button><button></button
+                ><button></button><button></button>
+              </div>
+              <p>John Doe</p>
+              <p>Accountant</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="" alt="" />
+              <p>
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system and expound the actual
+                teachings of the great explorer of the truth, the master-
+                builder of human happiness.
+              </p>
+              <div>
+                <button></button><button></button><button></button
+                ><button></button><button></button>
+              </div>
+              <p>John Smith</p>
+              <p>Journalist, HWO News</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <img src="" alt="" />
+              <p>
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system and expound the actual
+                teachings of the great explorer of the truth, the master-
+                builder of human happiness.
+              </p>
+              <div>
+                <button></button><button></button><button></button
+                ><button></button><button></button>
+              </div>
+              <p>Tamara Bellis</p>
+              <p>Managing Director, JTH</p>
+            </article>
+          </li>
+        </ul>
+        <div>
+          <button type="button">
+            <svg width="20" height="10">
+              <use />
+            </svg>
+          </button>
+          <button type="button">
+            <svg width="20" height="10">
+              <use />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Our Newsletter</h2>
+        <form>
+          <label for="email"
+            >Email<input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+          /></label>
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <a href="/">
+        <svg>
+          <use></use>
+        </svg>
+      </a>
+      <p>Copyright &copy; Travellian 2020 All rights reserved</p>
+      <nav>
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Travel</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h3>Information</h3>
+        <ul>
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Supports</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact Info</h3>
+        <a href="tel:+123456789">+123 456 789</a>
+        <a href="mailto:info@travellian.com">info@travellian.com</a>
+        <address>1245, New Yourk, USA</address>
+      </div>
+
+      <div>
+        <h3>Follow us on</h3>
+        <div>
+          <ul>
+            <li>
+              <a href="">
+                <svg>
+                  <use></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg>
+                  <use></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg>
+                  <use></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <svg>
+                  <use></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
