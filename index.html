@@ -6,479 +6,1299 @@
     <title>Travellian</title>
     <link rel="stylesheet" href="./dist/css/main.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Mulish&family=Playfair+Display:wght@400;500;600;700;800;900&family=Rubik:wght@400;500;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css "
       rel="stylesheet"
     />
   </head>
   <body>
-    <header>
-      <a href="/">
-        <svg width="234" height="45">
-          <use></use>
-        </svg>
-      </a>
+    <div class="header-hero-conntainer">
+      <header class="header container">
+        <div class="mobile-menu-container">
+          <a class="logo" href="/">
+            <svg class="logo__icon" width="234" height="45">
+              <use href="./images/icons/icons.svg#logo"></use>
+            </svg>
+          </a>
 
-      <nav>
-        <ul class="li">
-          <a href="#">Home</a>
-        </ul>
-        <ul class="li">
-          <a href="#">Explore</a>
-        </ul>
-        <ul class="li">
-          <a href="#">Travel</a>
-        </ul>
-        <ul class="li">
-          <a href="#">Blog</a>
-        </ul>
-        <ul class="li">
-          <a href="#">Pricing</a>
-        </ul>
-      </nav>
+          <button
+            type="button"
+            class="menu-button"
+            aria-label="open or close menu button"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg class="menu-icon" width="50" height="50">
+              <use href="./images/icons/icons.svg#hamburger"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="navigation">
+            <ul class="menu">
+              <li class="menu__item">
+                <a class="menu__link menu__link--active" href="#">Home</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Explore</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Travel</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Blog</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Pricing</a>
+              </li>
+            </ul>
+          </nav>
 
-      <div role="authentification">
-        <a href="#">Login</a>
-        <a href="#">Sign up</a>
-      </div>
-    </header>
-    <main>
-      <section>
-        <h1>
+          <div class="authentification">
+            <a class="authentification__link" href="#">Login</a>
+            <a
+              class="authentification__link authentification__link--signin"
+              href="#"
+              >Sign up</a
+            >
+          </div>
+        </div>
+      </header>
+      <section class="hero container">
+        <h1 class="hero__title">
           Start your unforgettable <br />
           journey with us.
         </h1>
-        <p>The best travel for your jouney begins now</p>
-        <div>
+        <p class="hero__descr">The best travel for your jouney begins now</p>
+        <div class="hero-pagination">
           <button></button><button></button><button></button><button></button
           ><button></button><button></button><button></button>
         </div>
-        <form>
-          <label for="destination">
-            Destination
-            <input
-              type="text"
-              id="destination"
-              name="destination"
-              placeholder="Dubai"
-            />
-          </label>
-          <label for="person-count">
-            <input
-              type="number"
-              name="person-count"
-              id="person-count"
-              min="1"
-              max="100"
-            />
-          </label>
-          <label for="check-in">
-            <input type="date" name="check-in" id="check-in" />
-          </label>
-          <label for="check-out">
-            <input type="date" name="check-in" id="check-in" />
-          </label>
-          <button type="submit">
+        <form class="booking-form">
+          <div class="input-container">
+            <label class="booking-form__lable" for="destination">
+              Destination
+              <input
+                class="booking-form__input"
+                type="text"
+                id="destination"
+                s
+                name="destination"
+                placeholder="Dubai"
+            /></label>
+            <label class="booking-form__lable" for="person-count"
+              >Person
+              <input
+                class="booking-form__input"
+                type="number"
+                name="person-count"
+                id="person-count"
+                min="1"
+                max="100"
+              />
+            </label>
+            <label class="booking-form__lable" for="check-in"
+              >Check in
+
+              <input
+                class="booking-form__input booking-form__input--date"
+                type="date"
+                name="check-in"
+                id="check-in"
+              />
+            </label>
+            <label class="booking-form__lable" for="check-out"
+              >Check out
+              <input
+                class="booking-form__input"
+                type="date"
+                name="check-in"
+                id="check-in"
+              />
+            </label>
+          </div>
+          <button class="booking-form__btn" type="submit">
             Book now
-            <svg width="22" height="16">
-              <use />
+            <svg class="arrow-icon" width="22" height="16">
+              <use href="./images/icons/icons.svg#arrow" />
             </svg>
           </button>
         </form>
       </section>
-
-      <section>
-        <h2>Popular Destinations</h2>
-        <p>
+    </div>
+    <main>
+      <section class="destinations container">
+        <h2 class="destinations__title">Popular Destinations</h2>
+        <p class="destinations__descr">
           Most popular destinations around the world, from historical places to
           natural wonders.
         </p>
-        <div>
-          <button type="button">
-            <svg width="20" height="10">
-              <use />
+        <div class="slide-buttons">
+          <button class="btn-prev" type="button">
+            <svg class="icon-left" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-left" />
             </svg>
           </button>
-          <button type="button">
-            <svg width="20" height="10">
-              <use />
+          <button class="btn-next" type="button">
+            <svg class="icon-right" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-right" />
             </svg>
           </button>
         </div>
-        <ul>
-          <li>
-            <a href="#"><img srcset="" alt="Monument of Berlin" /></a>
-            <div>
-              <p>Monument of Berlin</p>
-              <p>Berlin, Germany</p>
-            </div>
+        <ul class="destination-list">
+          <li class="destinations-list__item">
+            <a href="#">
+              <div class="destination__thumb">
+                <div class="destination__overlay"></div>
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/germany.webp    1x,
+                      ./images/mobile/germany@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/germany.jpg    1x,
+                      ./images/mobile/germany@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    srcset="/images/mobile/germany.jpg"
+                    alt="Monument of Berlin"
+                  />
+                </picture>
+              </div>
+              <div class="destinations-list__descr">
+                <p class="destination-list__place">Monument of Berlin</p>
+                <div class="location-container">
+                  <svg class="location-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#location"></use>
+                  </svg>
+                  <p class="destination-list__location">Berlin, Germany</p>
+                </div>
+              </div></a
+            >
           </li>
-          <li>
-            <a href="#"><img srcset="" alt="Millennium Bridge, London" /></a>
-            <div>
-              <p>Millennium Bridge</p>
-              <p>London, United Kingdom</p>
-            </div>
+          <li class="destinations-list__item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/london-mob.webp    1x,
+                    ./images/mobile/london-mob@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/london-mob.jpg    1x,
+                    ./images/mobile/london-mob@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  srcset="./images/mobile/london-mob.jpg"
+                  alt="Millennium Bridge, London"
+                />
+              </picture>
+              <div class="destinations-list__descr">
+                <p class="destination-list__place">Millennium Bridge</p>
+                <div class="location-container">
+                  <svg class="location-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#location"></use>
+                  </svg>
+                  <p class="destination-list__location">
+                    London, United Kingdom
+                  </p>
+                </div>
+              </div></a
+            >
           </li>
-          <li>
-            <a href="#"><img srcset="" alt="Rialto Bridge, Italy" /></a>
-            <div>
-              <p>Rialto Bridge</p>
-              <p>Venice, Italy</p>
-            </div>
+          <li class="destinations-list__item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/africa.webp    1x,
+                    ./images/mobile/africa@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/africa.jpg    1x,
+                    ./images/mobile/africa@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  srcset="./images/mobile/africa.jpg"
+                  alt="Sahara Desert, Merzouga, Africa"
+                />
+              </picture>
+              <div class="destinations-list__descr">
+                <p class="destination-list__place">Sahara Desert</p>
+                <div class="location-container">
+                  <svg class="location-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#location"></use>
+                  </svg>
+                  <p class="destination-list__location">Merzouga, Africa</p>
+                </div>
+              </div>
+            </a>
           </li>
-          <li>
-            <a href="#"><img srcset="" alt="Sea of Orange Tiles, Lisbon" /></a>
-            <div>
-              <p>Sea of Orange Tiles</p>
-              <p>Lisbon, Portugal</p>
-            </div>
+          <li class="destinations-list__item">
+            <a href="#">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/asia.webp    1x,
+                    ./images/mobile/asia@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/asia.jpg   1x,
+                    .images/mobile/asia@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  srcset="./images/mobile/asia.jpg"
+                  alt="Bali, Thailand, Asia"
+                />
+              </picture>
+              <div class="destinations-list__descr">
+                <p class="destination-list__place">Bali</p>
+                <div class="location-container">
+                  <svg class="location-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#location"></use>
+                  </svg>
+                  <p class="destination-list__location">Thailand, Asia</p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <div class="slide-buttons--mobile">
+          <button class="btn-prev" type="button">
+            <svg class="icon-left" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-left" />
+            </svg>
+          </button>
+          <button class="btn-next" type="button">
+            <svg class="icon-right" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-right" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="offers container">
+        <h2 class="offers__title">Special Offer</h2>
+        <p class="offers__descr">Check out our special offer and discounts</p>
+        <div class="slide-buttons">
+          <button class="btn-prev" type="button">
+            <svg class="icon-left" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-left" />
+            </svg>
+          </button>
+          <button class="btn-next" type="button">
+            <svg class="icon-right" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-right" />
+            </svg>
+          </button>
+        </div>
+        <ul class="offers-list">
+          <li class="offers-list__item">
+            <article class="offer-card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/portugal.webp    1x,
+                    ./images/mobile/portugal@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile/portugal.jpg    1x,
+                    ./images/mobile/portugal@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/mobile/portugal.jpg"
+                  alt="Lisbon, Portugal"
+                />
+              </picture>
+              <div class="offer-card__meta">
+                <h3 class="offer-card__title">Lisbon, Portugal</h3>
+                <div class="raiting">
+                  <button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="offer-card__descr">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical literature.
+                </p>
+                <p class="offer-card__price">
+                  From
+                  <span class="offer-card__price--accent">&#8364;500</span>
+                </p>
+                <a class="offer-card__details" href="#">Details</a>
+              </div>
+            </article>
+          </li>
+          <li class="offers-list__item">
+            <article class="offer-card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/greece.webp    1x,
+                    ./images/mobile/greece@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile/greece.jpg    1x,
+                    ./images/mobile/greece@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/mobile/greece.jpg" alt="Athens, Greece" />
+              </picture>
+              <div class="offer-card__meta">
+                <h3 class="offer-card__title">Athens, Greece</h3>
+                <div class="raiting">
+                  <button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="offer-card__descr">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical literature.
+                </p>
+                <p class="offer-card__price">
+                  From
+                  <span class="offer-card__price--accent">&#8364;800</span>
+                </p>
+                <a class="offer-card__details" href="#">Details</a>
+              </div>
+            </article>
+          </li>
+          <li class="offers-list__item">
+            <article class="offer-card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/rome.webp    1x,
+                    ./images/mobile/rome@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile/rome.jpg    1x,
+                    ./images/mobile/rome@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/mobile/rome.jpg" alt="Rome, Italy" />
+              </picture>
+              <div class="offer-card__meta">
+                <h3 class="offer-card__title">Rome, Italy</h3>
+                <div class="raiting--offers-margin">
+                  <button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="offer-card__descr">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical literature.
+                </p>
+                <p class="offer-card__price">
+                  From
+                  <span class="offer-card__price--accent">&#8364;750</span>
+                </p>
+                <a class="offer-card__details" href="#">Details</a>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="slide-buttons--mobile">
+          <button class="btn-prev" type="button">
+            <svg class="icon-left" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-left" />
+            </svg>
+          </button>
+          <button class="btn-next" type="button">
+            <svg class="icon-right" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-right" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="blog container">
+        <h2 class="blog__title">Our Blog</h2>
+        <p class="blog__descr">
+          An insight the incredible experience in the world
+        </p>
+        <ul class="blog-list">
+          <li class="blog-list__item">
+            <article class="post">
+              <div class="post__thumb">
+                <div class="post__overlay"></div>
+                <picture>
+                  <source
+                    srcset="
+                      ./images/mobile/blog.webp    1x,
+                      ./images/mobile/blog@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/mobile/blog.jpg    1x,
+                      ./images/mobile/blog@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    class="post__image"
+                    srcset="/images/mobile/blog.jpg"
+                    alt="Sea in Italy, mountains"
+                  />
+                </picture>
+              </div>
+              <h3 class="post__title">Beautiful Italy Let’s travel</h3>
+              <p class="post__contant">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system and expound the actual
+                teachings of the great explorer of the truth, the master-
+                builder of human happiness. No one rejects, dislike, or avoids
+                plasure itself, because it is pleasure, but because those who do
+                not know how to pursue pleasure rationally encounter
+                consequences that are extremly painful. Nor again is there
+                anyone who loves or pursues.
+              </p>
+              <a class="post__link" href="#"
+                >Read More
+                <svg class="arrow-icon arrow-icon--post" width="22" height="16">
+                  <use href="./images/icons/icons.svg#arrow" />
+                </svg>
+              </a>
+            </article>
           </li>
         </ul>
       </section>
 
-      <section>
-        <h2>Special Offer</h2>
-        <p>Check out our special offer and discounts</p>
-        <div>
-          <button type="button">
-            <svg width="20" height="10">
-              <use />
-            </svg>
-          </button>
-          <button type="button">
-            <svg width="20" height="10">
-              <use />
-            </svg>
-          </button>
-        </div>
-
-        <ul>
-          <li>
-            <article>
-              <img src="" alt="" />
-              <h3>Lisbon, Portugal</h3>
-              <div>
-                <button></button><button></button><button></button
-                ><button></button><button></button>
-              </div>
-              <p>
-                5 nights and 4 days in 5 star hotel, breakfast and lunch
-                included. Very popular during the renaissance. Passage and going
-                through the cites of the world in classical literature.
-              </p>
-              <p>From <span>&#8364;500</span></p>
-              <a href="#">Details</a>
-            </article>
-          </li>
-          <li>
-            <article>
-              <img src="" alt="" />
-              <h3>Athens, Greece</h3>
-              <div>
-                <button></button><button></button><button></button
-                ><button></button><button></button>
-              </div>
-              <p>
-                5 nights and 4 days in 5 star hotel, breakfast and lunch
-                included. Very popular during the renaissance. Passage and going
-                through the cites of the world in classical literature.
-              </p>
-              <p>From <span>&#8364;800</span></p>
-              <a href="#">Details</a>
-            </article>
-          </li>
-          <li>
-            <article>
-              <img src="" alt="" />
-              <h3>Lisbon, Portugal</h3>
-              <div>
-                <button></button><button></button><button></button
-                ><button></button><button></button>
-              </div>
-              <p>
-                5 nights and 4 days in 5 star hotel, breakfast and lunch
-                included. Very popular during the renaissance. Passage and going
-                through the cites of the world in classical literature.
-              </p>
-              <p>From <span>&#8364;750</span></p>
-              <a href="#">Details</a>
-            </article>
-          </li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Our Blog</h2>
-        <p>An insight the incredible experience in the world</p>
-        <article>
-          <img src="" alt="sea, mountains in Italy" />
-          <h3>Beautiful Italy Let’s travel</h3>
-          <p>
-            color: #172432; font-family: Rubik; font-size: 24px; font-style:
-            normal; font-weight: 400; line-height: 52px; /* 216.667% */
-          </p>
-          <a href="#">Read more</a>
-        </article>
-      </section>
-
-      <section>
-        <h2>Trip Planners</h2>
-        <p>
+      <section class="trips container">
+        <h2 class="trips__title">Trip Planners</h2>
+        <p class="trips__descr">
           20 years from now you will be more disappointed by the things that you
           didn’t do. Stop regretting and start travelling, start throwing off
           the bowlines.
         </p>
+        <div class="link-container">
+          <a class="trips__link" href="#"> View all trip plans </a>
+        </div>
 
-        <a href="#"> View all trip plans </a>
+        <ul class="trips-list">
+          <li class="trips-list__item">
+            <article class="trip-card">
+              <a href="#">
+                <div class="trip-card__thumb">
+                  <div class="trip-card__overlay"></div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/mobile/rome-tour.webp    1x,
+                        ./images/mobile/rome-tour@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/rome.jpg    1x,
+                        ./images/mobile/rome@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
 
-        <ul>
-          <li>
-            <article>
-              <a href="#"
-                ><img src="" alt="" />
-                <p>Guided Tour <span>&#8364;99/Day</span></p>
-                <div>
-                  <button></button><button></button><button></button
-                  ><button></button><button></button>
+                    <img src="./images/mobile/rome.jpg" alt="Rome, Coliseum" />
+                  </picture>
                 </div>
-                <p>7 Days tour</p></a
-              >
+                <div class="trip-card__meta">
+                  <div class="trip-card__price">
+                    <p class="trip-card__guide">Guided Tour</p>
+                    <p>&#8364;99/Day</p>
+                  </div>
+
+                  <h3 class="trip-card__name">Rome City Tour</h3>
+                  <div class="rate-container">
+                    <div class="raiting">
+                      <button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="trip-card__days">7 Days tour</p>
+                  </div>
+                </div>
+              </a>
             </article>
-            <h3>City Tour</h3>
           </li>
-          <li>
-            <article>
-              <a href="#"
-                ><img src="" alt="" />
-                <p>Guided Tour <span>&#8364;99/Day</span></p>
-                <div>
-                  <button></button><button></button><button></button
-                  ><button></button><button></button>
+          <li class="trips-list__item">
+            <article class="trip-card">
+              <a href="#">
+                <div class="trip-card__thumb">
+                  <div class="trip-card__overlay"></div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/mobile/paris-tour.webp    1x,
+                        ./images/mobile/paris-tour@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/paris-tour.jpg    1x,
+                        ./images/mobile/paris-tour@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./images/mobile/paris-tour.jpg"
+                      alt="France, Paris, Efel tower"
+                    />
+                  </picture>
                 </div>
-                <p>7 Days tour</p></a
-              >
+                <div class="trip-card__meta">
+                  <div class="trip-card__price">
+                    <p class="trip-card__guide">Guided Tour</p>
+                    <p>&#8364;99/Day</p>
+                  </div>
+
+                  <h3 class="trip-card__name">Paris City Tour</h3>
+                  <div class="rate-container">
+                    <div class="raiting">
+                      <button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="trip-card__days">7 Days tour</p>
+                  </div>
+                </div>
+              </a>
             </article>
           </li>
-          <li>
-            <article>
-              <a href="#"
-                ><img src="" alt="" />
-                <p>Guided Tour <span>&#8364;99/Day</span></p>
-                <div>
-                  <button></button><button></button><button></button
-                  ><button></button><button></button>
+          <li class="trips-list__item">
+            <article class="trip-card">
+              <a href="#">
+                <div class="trip-card__thumb">
+                  <div class="trip-card__overlay"></div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/mobile/barcelona-tour.webp    1x,
+                        ./images/mobile/barcelona-tour@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/barcelona-tour.jpg    1x,
+                        ./images/mobile/barcelona-tour@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./images/mobile/barcelona-tour.jpg"
+                      alt="Barcelona City"
+                    />
+                  </picture>
                 </div>
-                <p>7 Days tour</p></a
-              >
+                <div class="trip-card__meta">
+                  <div class="trip-card__price">
+                    <p class="trip-card__guide">Guided Tour</p>
+                    <p>&#8364;99/Day</p>
+                  </div>
+
+                  <h3 class="trip-card__name">Barcelona City Tour</h3>
+                  <div class="rate-container">
+                    <div class="raiting">
+                      <button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="trip-card__days">7 Days tour</p>
+                  </div>
+                </div>
+              </a>
             </article>
           </li>
-          <li>
-            <article>
-              <a href="#"
-                ><img src="" alt="" />
-                <p>Guided Tour <span>&#8364;99/Day</span></p>
-                <div>
-                  <button></button><button></button><button></button
-                  ><button></button><button></button>
+          <li class="trips-list__item">
+            <article class="trip-card">
+              <a href="#">
+                <div class="trip-card__thumb">
+                  <div class="trip-card__overlay"></div>
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/mobile/budapesht-tour.webp    1x,
+                        ./images/mobile/budapesht-tour@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/budapesht-tour.jpg    1x,
+                        ./images/mobile/budapesht-tour@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img
+                      src="./images/mobile/budapesht-tour.jpg"
+                      alt="Budapest City"
+                    />
+                  </picture>
                 </div>
-                <p>7 Days tour</p></a
-              >
+                <div class="trip-card__meta">
+                  <div class="trip-card__price">
+                    <p class="trip-card__guide">Guided Tour</p>
+                    <p>&#8364;99/Day</p>
+                  </div>
+
+                  <h3 class="trip-card__name">Budapest City Tour</h3>
+                  <div class="rate-container">
+                    <div class="raiting">
+                      <button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="trip-card__days">7 Days tour</p>
+                  </div>
+                </div>
+              </a>
             </article>
           </li>
         </ul>
       </section>
 
-      <section>
-        <h2>Destination Gallery</h2>
-        <p>Our photo gallery on trip</p>
-        <div>
-          <button type="button">
-            <svg width="20" height="10">
-              <use />
+      <section class="galery container">
+        <h2 class="galery__title">Destination Gallery</h2>
+        <p class="galery__descr">Our photo gallery on trip</p>
+        <div class="slide-buttons">
+          <button class="btn-prev" type="button">
+            <svg class="icon-left" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-left" />
             </svg>
           </button>
-          <button type="button">
-            <svg width="20" height="10">
-              <use />
+          <button class="btn-next" type="button">
+            <svg class="icon-right" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-right" />
             </svg>
           </button>
         </div>
+        <ul class="galery-list">
+          <li class="galery-list__item">
+            <div class="galery-list__thumb">
+              <div class="galery-list__overlay"></div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/photo1.webp    1x,
+                    ./images/mobile/photo1@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo1.jpg    1x,
+                    ./images/mobile/photo1@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
 
-        <ul>
-          <li>
-            <a href="#"><img src="" alt="" /></a>
+                <img
+                  src="./images/mobile/photo1.jpg"
+                  alt="A man is walking on railways with photocamera"
+                />
+              </picture>
+            </div>
           </li>
-          <li>
-            <a href="#"><img src="" alt="" /></a>
+          <li class="galery-list__item">
+            <div class="galery-list__thumb">
+              <div class="galery-list__overlay"></div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/photo2.webp    1x,
+                    ./images/mobile/photo2@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo2.jpg    1x,
+                    ./images/mobile/photo2@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/mobile/photo2.jpg"
+                  alt="A man is walking on skinny street"
+                />
+              </picture>
+            </div>
           </li>
-          <li>
-            <a href="#"><img src="" alt="" /></a>
+          <li class="galery-list__item">
+            <div class="galery-list__thumb">
+              <div class="galery-list__overlay"></div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/photo3.webp    1x,
+                    ./images/mobile/photo3@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo3.jpg    1x,
+                    ./images/mobile/photo3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/mobile/photo3.jpg"
+                  alt="A cuple seeting on the send ofthe sea beach"
+                />
+              </picture>
+            </div>
           </li>
-          <li>
-            <a href="#"><img src="" alt="" /></a>
+          <li class="galery-list__item">
+            <div class="galery-list__thumb">
+              <div class="galery-list__overlay"></div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/mobile/photo4.webp    1x,
+                    ./images/mobile/photo4@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo4.jpg    1x,
+                    ./images/mobile/photo4@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/mobile/photo4.jpg"
+                  alt="A man staying in fron of the painting wall"
+                />
+              </picture>
+            </div>
           </li>
         </ul>
-      </section>
-
-      <section>
-        <h2>Traveler&#39;s Experiences</h2>
-        <p>Here some awesome feedback from our travelers</p>
-        <ul>
-          <li>
-            <article>
-              <img src="" alt="" />
-              <p>
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system and expound the actual
-                teachings of the great explorer of the truth, the master-
-                builder of human happiness.
-              </p>
-              <div>
-                <button></button><button></button><button></button
-                ><button></button><button></button>
-              </div>
-              <p>John Doe</p>
-              <p>Accountant</p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <img src="" alt="" />
-              <p>
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system and expound the actual
-                teachings of the great explorer of the truth, the master-
-                builder of human happiness.
-              </p>
-              <div>
-                <button></button><button></button><button></button
-                ><button></button><button></button>
-              </div>
-              <p>John Smith</p>
-              <p>Journalist, HWO News</p>
-            </article>
-          </li>
-          <li>
-            <article>
-              <img src="" alt="" />
-              <p>
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system and expound the actual
-                teachings of the great explorer of the truth, the master-
-                builder of human happiness.
-              </p>
-              <div>
-                <button></button><button></button><button></button
-                ><button></button><button></button>
-              </div>
-              <p>Tamara Bellis</p>
-              <p>Managing Director, JTH</p>
-            </article>
-          </li>
-        </ul>
-        <div>
-          <button type="button">
-            <svg width="20" height="10">
-              <use />
+        <div class="slide-buttons--mobile">
+          <button class="btn-prev" type="button">
+            <svg class="icon-left" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-left" />
             </svg>
           </button>
-          <button type="button">
-            <svg width="20" height="10">
-              <use />
+          <button class="btn-next" type="button">
+            <svg class="icon-right" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-right" />
             </svg>
           </button>
         </div>
       </section>
 
-      <section>
-        <h2>Our Newsletter</h2>
-        <form>
-          <label for="email"
-            >Email<input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email"
-          /></label>
-          <button type="submit">Subscribe</button>
-        </form>
+      <section class="expirience container">
+        <h2 class="experience__title">Traveler's Experiences</h2>
+        <p class="experience__descr">
+          Here some awesome feedback from our travelers
+        </p>
+        <div class="slide-buttons">
+          <button class="btn-prev" type="button">
+            <svg class="icon-left" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-left" />
+            </svg>
+          </button>
+          <button class="btn-next" type="button">
+            <svg class="icon-right" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-right" />
+            </svg>
+          </button>
+        </div>
+        <ul class="expirience-list">
+          <li class="expirience-list__item">
+            <article class="feedback">
+              <div class="avatar-container">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/avatars/avatar1.webp    1x,
+                      ./images/avatars/avatar1@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/avatars/avatar1.jpg    1x,
+                      ./images/avatars/avatar1@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/avatars/avatar1.jpg" alt="John Doe" />
+                </picture>
+              </div>
+              <p class="feedback__message">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system and expound the actual
+                teachings of the great explorer of the truth, the master-
+                builder of human happiness.
+              </p>
+              <div class="raiting raiting--feedback-margin">
+                <button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg>
+                </button>
+              </div>
+              <p class="feedback__author">John Doe</p>
+              <p class="feedback__ocupation">Accountant</p>
+            </article>
+          </li>
+          <li class="expirience-list__item">
+            <article class="feedback">
+              <div class="avatar-container">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/avatars/avatar2.webp    1x,
+                      ./images/avatars/avatar2@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/avatars/avatar2.jpg    1x,
+                      ./images/avatars/avatar2@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/avatars/avatar2.jpg" alt="John Smith" />
+                </picture>
+              </div>
+              <p class="feedback__message">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system and expound the actual
+                teachings of the great explorer of the truth, the master-
+                builder of human happiness.
+              </p>
+              <div class="raiting raiting--feedback-margin">
+                <button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg>
+                </button>
+              </div>
+              <p class="feedback__author">John Smith</p>
+              <p class="feedback__ocupation">Journalist, HWO News</p>
+            </article>
+          </li>
+          <li class="expirience-list__item">
+            <article class="feedback">
+              <div class="avatar-container">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/avatars/avatar3.webp    1x,
+                      ./images/avatars/avatar3@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/avatars/avatar3.jpg    1x,
+                      ./images/avatars/avatar3@2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+                  <img src="./images/avatars/avatar3.jpg" alt="Tamara Bellis" />
+                </picture>
+              </div>
+              <p class="feedback__message">
+                But I must explain to you how all this mistaken idea of
+                denouncing pleasure and praising pain was born and I will give
+                you a complete account of the system and expound the actual
+                teachings of the great explorer of the truth, the master-
+                builder of human happiness.
+              </p>
+              <div class="raiting raiting--feedback-margin">
+                <button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg></button
+                ><button class="raiting__btn">
+                  <svg class="star-icon" width="24" height="24">
+                    <use href="./images/icons/icons.svg#star"></use>
+                  </svg>
+                </button>
+              </div>
+              <p class="feedback__author">Tamara Bellis</p>
+              <p class="feedback__ocupation">Managing Director, JTH</p>
+            </article>
+          </li>
+        </ul>
+        <div class="slide-buttons--mobile">
+          <button class="btn-prev" type="button">
+            <svg class="icon-left" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-left" />
+            </svg>
+          </button>
+          <button class="btn-next" type="button">
+            <svg class="icon-right" width="60" height="60">
+              <use href="./images/icons/icons.svg#slide-right" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="subscribe container">
+        <div class="form-container">
+          <h2 class="subscribe__title">Our Newsletter</h2>
+          <form>
+            <label class="subscribe__label" for="email"
+              >Email<input
+                class="subscribe__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+            /></label>
+            <button class="subscribe__btn" type="submit">Subscribe</button>
+          </form>
+        </div>
       </section>
     </main>
-    <footer>
-      <a href="/">
-        <svg>
-          <use></use>
+    <footer class="footer container">
+      <a class="footer__logo" class="logo" href="/">
+        <svg class="logo__icon" width="234" height="45">
+          <use href="./images/icons/icons.svg#logo"></use>
         </svg>
       </a>
-      <p>Copyright &copy; Travellian 2020 All rights reserved</p>
+      <p class="footer__copirating">
+        Copyright &copy; Travellian 2020 All rights reserved
+      </p>
       <nav>
-        <h3>Menu</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Explore</a></li>
-          <li><a href="#">Travel</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Pricing</a></li>
+        <h3 class="footer__title">Menu</h3>
+        <ul class="footer-menu">
+          <li class="footer-menu__item"><a href="#">Home</a></li>
+          <li class="footer-menu__item"><a href="#">Explore</a></li>
+          <li class="footer-menu__item"><a href="#">Travel</a></li>
+          <li class="footer-menu__item"><a href="#">Blog</a></li>
+          <li class="footer-menu__item"><a href="#">Pricing</a></li>
         </ul>
       </nav>
 
       <div>
-        <h3>Information</h3>
-        <ul>
-          <li><a href="#">Destinations</a></li>
-          <li><a href="#">Supports</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy</a></li>
+        <h3 class="footer__title">Information</h3>
+        <ul class="footer-info">
+          <li class="footer-info__item"><a href="#">Destinations</a></li>
+          <li class="footer-info__item"><a href="#">Supports</a></li>
+          <li class="footer-info__item"><a href="#">Terms & Conditions</a></li>
+          <li class="footer-info__item"><a href="#">Privacy</a></li>
         </ul>
       </div>
 
-      <div>
-        <h3>Contact Info</h3>
-        <a href="tel:+123456789">+123 456 789</a>
-        <a href="mailto:info@travellian.com">info@travellian.com</a>
+      <div class="footer-info">
+        <h3 class="footer__title">Contact Info</h3>
+        <a class="footer-info__phone" href="tel:+123456789">+123 456 789</a>
+        <a class="footer-info__mail" href="mailto:info@travellian.com"
+          >info@travellian.com</a
+        >
         <address>1245, New Yourk, USA</address>
       </div>
 
-      <div>
-        <h3>Follow us on</h3>
-        <div>
-          <ul>
-            <li>
-              <a href="">
-                <svg>
-                  <use></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg>
-                  <use></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg>
-                  <use></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <svg>
-                  <use></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <div class="socials">
+        <h3 class="footer__title">Follow us on</h3>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a href="#">
+              <svg class="socials-icon" width="32" height="32">
+                <use href="./images/icons/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#">
+              <svg class="socials-icon" width="32" height="32">
+                <use href="./images/icons/icons.svg#pinterest"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#">
+              <svg class="socials-icon" width="32" height="32">
+                <use href="./images/icons/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a href="#">
+              <svg class="socials-icon" width="32" height="32">
+                <use href="./images/icons/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
+    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
   </body>
 </html>

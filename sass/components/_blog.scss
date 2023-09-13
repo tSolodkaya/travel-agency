@@ -1,0 +1,49 @@
+.blog {
+  @extend %section;
+}
+
+.blog__title {
+  @extend %section-title;
+}
+
+.blog__descr {
+  @extend %section-description;
+  margin-bottom: 100px;
+}
+
+.blog-list__item {
+  max-width: 288px;
+  margin: 0 auto;
+}
+
+.post__thumb {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.post__overlay {
+  @extend %overlay;
+  border-radius: 26px;
+}
+
+.post__title {
+  color: $text-color-headers;
+  font-family: $accent-text-font;
+  font-size: 40px;
+}
+
+.post__contant {
+  color: $text-color-headers;
+  line-height: 2.3;
+}
+
+.post__link {
+  color: $primary-color;
+  font-family: $text-color-paragraph;
+  font-size: 24px;
+  line-height: 2.2;
+}
+
+.arrow-icon--post {
+  fill: $primary-color;
+}

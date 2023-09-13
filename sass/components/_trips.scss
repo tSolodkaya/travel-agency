@@ -1,0 +1,115 @@
+.trips {
+  @extend %section;
+}
+
+.trips__title {
+  @extend %section-title;
+}
+
+.trips__descr {
+  @extend %section-description;
+  margin-bottom: 32px;
+}
+
+.trips__link {
+  color: $text-color-light;
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.2;
+  border-radius: 12px;
+  background: $primary-color;
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+
+  &:hover {
+    box-shadow: $btn-hover-shadow;
+  }
+}
+.link-container {
+  margin-left: 20px;
+  margin-top: 20px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 80px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+    width: 43px;
+    height: 43px;
+    background-color: $text-color-headers;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    z-index: 1;
+
+    width: 43px;
+    height: 43px;
+    background-color: $text-color-paragraph;
+  }
+}
+
+.trips-list__item {
+  max-width: 288px;
+  margin: 0 auto;
+
+  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.trip-card__thumb {
+  position: relative;
+}
+
+.trip-card__overlay {
+  @extend %overlay;
+  border-radius: 26px;
+}
+
+.trip-card__meta {
+  padding: 20px 0;
+}
+
+.rate-container,
+.trip-card__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trip-card__price,
+.trip-card__days {
+  color: $text-color-headers;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.trip-card__guide {
+  text-transform: uppercase;
+}
+
+.trip-card__name {
+  color: $text-color-headers;
+  font-family: $accent-text-font;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  margin-bottom: 12px;
+}

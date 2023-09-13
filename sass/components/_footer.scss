@@ -1,0 +1,41 @@
+.footer {
+  @extend %section;
+  background-color: $text-color-headers;
+
+  color: $text-color-light;
+}
+
+.footer__logo {
+  margin-bottom: 16px;
+}
+
+.footer__copirating {
+  font-size: 14px;
+  margin-bottom: 60px;
+}
+
+.footer__title {
+  font-size: 24px;
+  font-weight: 500;
+
+  margin-bottom: 16px;
+}
+
+.footer-menu {
+  margin-bottom: 60px;
+}
+
+.footer-menu__item,
+.footer-info__item {
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.footer-info {
+  margin-bottom: 60px;
+}
+
+.footer-info__phone {
+  margin-bottom: 12px;
+}

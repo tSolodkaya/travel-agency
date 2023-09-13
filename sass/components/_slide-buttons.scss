@@ -1,0 +1,26 @@
+.icon-right {
+  fill: $primary-color;
+}
+
+.icon-left {
+  fill: $text-color-headers;
+}
+
+.btn-next {
+  margin-left: 24px;
+}
+
+.slide-buttons--mobile {
+  display: none;
+  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.slide-buttons {
+  display: none;
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    display: block;
+  }
+}

@@ -1,0 +1,17 @@
+.hero__title {
+  color: $text-color-light;
+  font-family: $accent-text-font;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.hero__descr {
+  color: $text-color-light;
+  margin-bottom: 100px;
+}
+
+.hero__pagination {
+  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+    display: none;
+  }
+}

@@ -7,12 +7,36 @@ $secondary-color: #331811;
 $secondary-color-light: #61291c;
 $main-text-font: "Rubik", sans-serif;
 $accent-text-font: "Playfair Display", serif;
+$card-title-font: "Mulish", sans-serif;
 $email-input-background-color: #ffe8d4;
+$hero-image-gradient: linear-gradient(
+  0deg,
+  rgba(0, 0, 0, 0.3) 0%,
+  rgba(0, 0, 0, 0.3) 100%
+);
+$post-image-gradient: linear-gradient(
+  0deg,
+  rgba(0, 0, 0, 0.2) 0%,
+  rgba(0, 0, 0, 0.2) 100%
+);
+
+$booking-form-input-border-color: #000;
+$btn-hover-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+$star-color: #ffc107;
+$offer-card-bg: rgba(255, 119, 87, 0.1);
+$feedback-background-color: #f5f6f7;
+$subscribe-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+
+$transition-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 $breakpoints: (
   "mobile": 320px,
+  "to-tablet": 767px,
   "tablet": 768px,
+  "to-desctop-s": 1151px,
   "desctop-s": 1152px,
+  "to-desctop-m": 1439px,
   "dectop-m": 1440px,
+  "to-desctop-l": 1919px,
   "desctop-l": 1920px,
 );

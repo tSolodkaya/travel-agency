@@ -1,0 +1,21 @@
+.star-icon {
+  fill: $star-color;
+}
+
+.raiting--offers-margin {
+  margin-bottom: 24px;
+}
+
+.raiting__btn {
+  display: inline-block;
+}
+
+.raiting__btn + .raiting__btn {
+  margin-left: 4px;
+}
+
+.raiting {
+  &--feedback-margin {
+    margin-bottom: 20px;
+  }
+}

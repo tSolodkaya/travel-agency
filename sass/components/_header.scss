@@ -1,0 +1,116 @@
+.header-hero-conntainer {
+  background-image: $hero-image-gradient,
+    url("../../images/tablet/hero-768.jpg");
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url("../../images/tablet/hero-768@2x.jpg");
+  }
+
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+
+  padding-bottom: 100px;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 100px;
+  padding: 24px 32px 0 32px;
+}
+
+.menu-container {
+  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    padding: 16px;
+    background-color: $text-color-light;
+
+    &.is-open {
+      display: block;
+    }
+  }
+}
+
+.menu-button {
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    display: none;
+  }
+}
+
+.menu-icon {
+  fill: $text-color-light;
+
+  .menu-button:hover & {
+    fill: $primary-color;
+  }
+}
+
+.mobile-menu-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__link {
+  font-family: $main-text-font;
+  font-size: 20px;
+
+  &--active {
+    color: $primary-color;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $btn-hover-shadow;
+    border-radius: 6px;
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+    font-size: 30px;
+  }
+}
+
+.menu__item {
+  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.navigation {
+  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+    margin-bottom: 30px;
+  }
+}
+
+.authentification {
+  display: flex;
+  align-items: center;
+}
+
+.authentification__link {
+  font-size: 20px;
+  border: 1px solid $primary-color;
+  border-radius: 12px;
+
+  padding: 20px 32px;
+
+  &--signin {
+    margin-left: 36px;
+    background-color: $primary-color;
+    color: $text-color-light;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: $btn-hover-shadow;
+  }
+}

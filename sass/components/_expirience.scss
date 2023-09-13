@@ -1,0 +1,57 @@
+.expirience {
+  @extend %section;
+}
+
+.experience__title {
+  @extend %section-title;
+}
+
+.experience__descr {
+  @extend %section-description;
+  margin-bottom: 100px;
+}
+
+.expirience-list {
+  margin-bottom: 100px;
+}
+
+.expirience-list__item {
+  position: relative;
+  max-width: 288px;
+  margin: 0 auto;
+  background-color: $feedback-background-color;
+  border-radius: 12px;
+  padding: 60px 20px 32px 20px;
+
+  &:not(:first-child) {
+    display: none;
+  }
+}
+
+.feedback__message {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.feedback__author {
+  font-family: $text-color-headers;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.feedback__ocupation {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.avatar-container {
+  position: absolute;
+  top: -65px;
+  left: 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  overflow: hidden;
+}

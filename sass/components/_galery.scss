@@ -1,0 +1,36 @@
+.galery {
+  @extend %section;
+}
+
+.galery__title {
+  @extend %section-title;
+}
+
+.galery__descr {
+  @extend %section-description;
+  margin-bottom: 100px;
+}
+
+.galery-list {
+  margin-bottom: 100px;
+}
+
+.galery-list__item {
+  max-width: 288px;
+  margin: 0 auto;
+
+  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.galery-list__thumb {
+  position: relative;
+}
+
+.galery-list__overlay {
+  @extend %overlay;
+  border-radius: 26px;
+}

@@ -1,0 +1,69 @@
+.booking-form {
+  max-width: 248px;
+  margin: 0 auto;
+  // margin-bottom: 100px;
+
+  background-color: $text-color-light;
+  border-radius: 16px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 60px;
+}
+
+.booking-form__lable {
+  text-transform: uppercase;
+}
+
+.booking-form__input {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 40px;
+  padding-bottom: 12px;
+  border: 1px solid transparent;
+  border-bottom: 1px solid $booking-form-input-border-color;
+  outline: none;
+
+  color: $text-color-headers;
+  font-family: $accent-text-font;
+  font-size: 14px;
+
+  transition: border-bottom 250ms $transition-function;
+  &::placeholder {
+    color: $text-color-headers;
+    font-family: $accent-text-font;
+  }
+}
+
+.booking-form__input:focus-within {
+  border-bottom: 1px solid $primary-color;
+}
+
+.booking-form__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 20px;
+  width: 100%;
+
+  color: $text-color-light;
+  font-family: $accent-text-font;
+  font-size: 36px;
+  background-color: $primary-color;
+  border-radius: 0 0 16px 16px;
+
+  transition: box-shadow 250ms $transition-function;
+
+  &:hover {
+    box-shadow: $btn-hover-shadow;
+  }
+}
+
+.arrow-icon {
+  fill: $text-color-light;
+  margin-left: 12px;
+}

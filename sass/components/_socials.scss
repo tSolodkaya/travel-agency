@@ -1,0 +1,14 @@
+.socials-icon {
+  fill: $text-color-light;
+  display: block;
+}
+
+.social-list {
+  display: flex;
+}
+
+.social-list__item {
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
+}
