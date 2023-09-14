@@ -2,10 +2,6 @@
   fill: $star-color;
 }
 
-.raiting--offers-margin {
-  margin-bottom: 24px;
-}
-
 .raiting__btn {
   display: inline-block;
 }
@@ -17,5 +13,8 @@
 .raiting {
   &--feedback-margin {
     margin-bottom: 20px;
+  }
+  &--offers-margin {
+    margin-bottom: 24px;
   }
 }

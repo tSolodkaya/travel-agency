@@ -52,6 +52,10 @@ button {
   @media screen and (min-width: map-get($breakpoints, "mobile")) {
     min-width: 320px;
   }
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    padding: 0 20px 0px 20px;
+  }
 }
 
 .visually-hidden {

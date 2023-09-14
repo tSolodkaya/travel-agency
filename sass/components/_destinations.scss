@@ -17,8 +17,17 @@
 
 .destinations-list__item {
   max-width: 288px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    max-width: 728px;
+  }
+
   position: relative;
   margin: 0 auto;
+
+  &:not(:first-child) {
+    display: none;
+  }
 }
 
 .destinations-list__descr {
@@ -34,6 +43,16 @@
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 16px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 28px;
+  }
+}
+
+.destination-list__location {
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 24px;
+  }
 }
 
 .location-icon {
@@ -52,4 +71,8 @@
 .destination__overlay {
   @extend %overlay;
   border-radius: 16px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    border-radius: 26px;
+  }
 }

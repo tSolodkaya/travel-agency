@@ -3,6 +3,10 @@
   background-color: $text-color-headers;
 
   color: $text-color-light;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    padding-top: 100px;
+  }
 }
 
 .footer__logo {
@@ -36,6 +40,7 @@
   margin-bottom: 60px;
 }
 
-.footer-info__phone {
+.footer-info__phone,
+.footer-info__mail {
   margin-bottom: 12px;
 }

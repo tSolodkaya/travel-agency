@@ -12,7 +12,7 @@
 
 .slide-buttons--mobile {
   display: none;
-  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
     display: block;
     text-align: center;
   }
@@ -20,7 +20,7 @@
 
 .slide-buttons {
   display: none;
-  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+  @media screen and (min-width: map-get($breakpoints,"desctop-s")) {
     display: block;
   }
 }

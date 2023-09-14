@@ -2,16 +2,65 @@
   color: $text-color-light;
   font-family: $accent-text-font;
   font-size: 40px;
+  font-weight: 400;
   margin-bottom: 16px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 54px;
+  }
 }
 
 .hero__descr {
   color: $text-color-light;
   margin-bottom: 100px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 20px;
+  }
 }
 
-.hero__pagination {
-  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
-    display: none;
+.pagination {
+  display: none;
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    position: absolute;
+    right: 20px;
+    top: 66px;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hero {
+  padding-top: 0 20px 0;
+  position: relative;
+}
+
+.pagination__btn {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $text-color-light;
+
+  &--active {
+    background-color: $primary-color;
+  }
+}
+
+.pagination__item {
+  margin-bottom: 34px;
+}
+
+.pagination__prev {
+  margin-bottom: 16px;
+}
+
+.pagination__icon {
+  stroke: $text-color-light;
+  transition: stroke 250ms $transition-function;
+
+  .pagination__prev:hover &,
+  .pagination__next:hover & {
+    stroke: $primary-color;
   }
 }

@@ -1,14 +1,28 @@
 .offers__title {
   @extend %section-title;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    text-align: end;
+    &:after {
+      margin-left: auto;
+    }
+  }
 }
 
 .offers__descr {
   @extend %section-description;
   margin-bottom: 60px;
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    text-align: end;
+  }
 }
 
 .offers-list {
   margin-bottom: 60px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    margin-bottom: 100px;
+  }
 }
 
 .offers-list__item {
@@ -26,6 +40,10 @@
   border: 1px solid transparent;
   border-radius: 26px;
   overflow: hidden;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    max-width: 728px;
+  }
 }
 
 .offer-card__meta {
@@ -44,18 +62,27 @@
   font-size: 16px;
   line-height: 1.25;
   margin-bottom: 24px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 18px;
+  }
 }
 
 .offer-card__price {
   margin-bottom: 20px;
-}
 
-.offer-card__price--accent {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 8px;
-  color: $primary-color;
-  font-size: 32px;
+  &--accent {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    color: $primary-color;
+    font-size: 32px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
 
 .offer-card__details {
@@ -68,4 +95,10 @@
   padding: 16px 24px;
   border: 1px solid $primary-color;
   border-radius: 12px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

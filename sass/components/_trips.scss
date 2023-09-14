@@ -13,7 +13,7 @@
 
 .trips__link {
   color: $text-color-light;
-  font-family: Rubik;
+  font-family: $main-text-font;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
@@ -28,6 +28,7 @@
     box-shadow: $btn-hover-shadow;
   }
 }
+
 .link-container {
   margin-left: 20px;
   margin-top: 20px;
@@ -65,20 +66,25 @@
   max-width: 288px;
   margin: 0 auto;
 
-  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
     &:not(:last-child) {
       margin-bottom: 40px;
     }
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    max-width: 728px;
   }
 }
 
 .trip-card__thumb {
   position: relative;
+  border-radius: 26px;
+  overflow: hidden;
 }
 
 .trip-card__overlay {
   @extend %overlay;
-  border-radius: 26px;
 }
 
 .trip-card__meta {
@@ -98,10 +104,17 @@
   font-size: 18px;
   line-height: 1.2;
   margin-bottom: 12px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 24px;
+  }
 }
 
 .trip-card__guide {
   text-transform: uppercase;
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 24px;
+  }
 }
 
 .trip-card__name {
@@ -110,6 +123,10 @@
   font-size: 28px;
   font-weight: 600;
   line-height: 1.2;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 32px;
+  }
 
   margin-bottom: 12px;
 }

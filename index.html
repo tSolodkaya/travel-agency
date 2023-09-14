@@ -77,10 +77,40 @@
           journey with us.
         </h1>
         <p class="hero__descr">The best travel for your jouney begins now</p>
-        <div class="hero-pagination">
-          <button></button><button></button><button></button><button></button
-          ><button></button><button></button><button></button>
-        </div>
+        <ul class="pagination">
+          <li class="pagination__item">
+            <button class="pagination__btn pagination__btn--active"></button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__btn"></button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__btn"></button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__btn"></button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__btn"></button>
+          </li>
+          <li>
+            <button class="pagination__prev">
+              <svg class="pagination__icon" width="16" height="8">
+                <use href="./images/icons/pagination.svg#arrow-prev"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="pagination__next">
+              <svg class="pagination__icon" width="16" height="8">
+                <use
+                  href="./images/icons/pagination.svg#arrow-next
+                "
+                ></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
         <form class="booking-form">
           <div class="input-container">
             <label class="booking-form__lable" for="destination">
@@ -152,6 +182,7 @@
             </svg>
           </button>
         </div>
+
         <ul class="destination-list">
           <li class="destinations-list__item">
             <a href="#">
@@ -160,11 +191,19 @@
                 <picture>
                   <source
                     srcset="
-                      ./images/mobile/germany.webp    1x,
-                      ./images/mobile/germany@2x.webp 2x
+                      ./images/tablet/berlin.webp    1x,
+                      ./images/tablet/berlin@2x.webp 2x
                     "
-                    media="(max-width: 767px)"
+                    media="(min-width: 768px)"
                     type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/berlin.jpg    1x,
+                      ./images/tablet/berlin@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
                   />
                   <source
                     srcset="
@@ -174,6 +213,15 @@
                     media="(max-width: 767px)"
                     type="image/jpeg"
                   />
+                  <source
+                    srcset="
+                      ./images/mobile/germany.webp    1x,
+                      ./images/mobile/germany@2x.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+
                   <img
                     srcset="/images/mobile/germany.jpg"
                     alt="Monument of Berlin"
@@ -194,6 +242,22 @@
           <li class="destinations-list__item">
             <a href="#">
               <picture>
+                <source
+                  srcset="
+                    ./images/tablet/london.webp    1x,
+                    ./images/tablet/london@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/london.jpg    1x,
+                    ./images/tablet/london@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
                 <source
                   srcset="
                     ./images/mobile/london-mob.webp    1x,
@@ -233,6 +297,22 @@
               <picture>
                 <source
                   srcset="
+                    ./images/tablet/africa.webp    1x,
+                    ./images/tablet/africa@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/africa.jpg    1x,
+                    ./images/tablet/africa@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
                     ./images/mobile/africa.webp    1x,
                     ./images/mobile/africa@2x.webp 2x
                   "
@@ -266,6 +346,22 @@
           <li class="destinations-list__item">
             <a href="#">
               <picture>
+                <source
+                  srcset="
+                    ./images/tablet/asia.webp    1x,
+                    ./images/tablet/asia@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/asia.jpg    1x,
+                    ./images/tablet/asia@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
                 <source
                   srcset="
                     ./images/mobile/asia.webp    1x,
@@ -335,6 +431,23 @@
               <picture>
                 <source
                   srcset="
+                    ./images/tablet/lisbon.webp    1x,
+                    ./images/tablet/lisbon@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/lisbon.jpg    1x,
+                    ./images/tablet/lisbon@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
                     ./images/mobile/portugal.webp    1x,
                     ./images/mobile/portugal@2x.webp 2x
                   "
@@ -357,7 +470,7 @@
               </picture>
               <div class="offer-card__meta">
                 <h3 class="offer-card__title">Lisbon, Portugal</h3>
-                <div class="raiting">
+                <div class="raiting raiting--offers-margin">
                   <button class="raiting__btn">
                     <svg class="star-icon" width="24" height="24">
                       <use href="./images/icons/icons.svg#star"></use>
@@ -385,17 +498,36 @@
                   included. Very popular during the renaissance. Passage and
                   going through the cites of the world in classical literature.
                 </p>
-                <p class="offer-card__price">
-                  From
-                  <span class="offer-card__price--accent">&#8364;500</span>
-                </p>
-                <a class="offer-card__details" href="#">Details</a>
+                <div class="price-container">
+                  <p class="offer-card__price">
+                    From
+                    <span class="offer-card__price--accent">&#8364;500</span>
+                  </p>
+                  <a class="offer-card__details" href="#">Details</a>
+                </div>
               </div>
             </article>
           </li>
           <li class="offers-list__item">
             <article class="offer-card">
               <picture>
+                <source
+                  srcset="
+                    ./images/tablet/greece.webp    1x,
+                    ./images/tablet/greece@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/greece.jpg    1x,
+                    ./images/tablet/greece@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
                 <source
                   srcset="
                     ./images/mobile/greece.webp    1x,
@@ -417,7 +549,7 @@
               </picture>
               <div class="offer-card__meta">
                 <h3 class="offer-card__title">Athens, Greece</h3>
-                <div class="raiting">
+                <div class="raiting raiting--offers-margin">
                   <button class="raiting__btn">
                     <svg class="star-icon" width="24" height="24">
                       <use href="./images/icons/icons.svg#star"></use>
@@ -445,17 +577,36 @@
                   included. Very popular during the renaissance. Passage and
                   going through the cites of the world in classical literature.
                 </p>
-                <p class="offer-card__price">
-                  From
-                  <span class="offer-card__price--accent">&#8364;800</span>
-                </p>
-                <a class="offer-card__details" href="#">Details</a>
+                <div class="price-container">
+                  <p class="offer-card__price">
+                    From
+                    <span class="offer-card__price--accent">&#8364;800</span>
+                  </p>
+                  <a class="offer-card__details" href="#">Details</a>
+                </div>
               </div>
             </article>
           </li>
           <li class="offers-list__item">
             <article class="offer-card">
               <picture>
+                <source
+                  srcset="
+                    ./images/tablet/rome.webp    1x,
+                    ./images/tablet/rome@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/rome.jpg    1x,
+                    ./images/tablet/rome@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
                 <source
                   srcset="
                     ./images/mobile/rome.webp    1x,
@@ -505,11 +656,13 @@
                   included. Very popular during the renaissance. Passage and
                   going through the cites of the world in classical literature.
                 </p>
-                <p class="offer-card__price">
-                  From
-                  <span class="offer-card__price--accent">&#8364;750</span>
-                </p>
-                <a class="offer-card__details" href="#">Details</a>
+                <div class="price-container">
+                  <p class="offer-card__price">
+                    From
+                    <span class="offer-card__price--accent">&#8364;750</span>
+                  </p>
+                  <a class="offer-card__details" href="#">Details</a>
+                </div>
               </div>
             </article>
           </li>
@@ -541,6 +694,22 @@
                 <picture>
                   <source
                     srcset="
+                      ./images/tablet/blog.webp    1x,
+                      ./images/tablet/blog@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/blog.jpg    1x,
+                      ./images/tablet/blog@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
                       ./images/mobile/blog.webp    1x,
                       ./images/mobile/blog@2x.webp 2x
                     "
@@ -562,8 +731,8 @@
                   />
                 </picture>
               </div>
-              <h3 class="post__title">Beautiful Italy Let’s travel</h3>
-              <p class="post__contant">
+              <h3 class="post__title">Beautiful Italy </br> Let’s travel</h3>
+              <p class="post__content">
                 But I must explain to you how all this mistaken idea of
                 denouncing pleasure and praising pain was born and I will give
                 you a complete account of the system and expound the actual
@@ -603,6 +772,22 @@
                 <div class="trip-card__thumb">
                   <div class="trip-card__overlay"></div>
                   <picture>
+                    <source
+                    srcset="
+                      ./images/tablet/rome-tour.webp    1x,
+                      ./images/tablet/rome-tour@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/rome-tour.jpg   1x,
+                      ./images/tablet/rome-tour@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
                     <source
                       srcset="
                         ./images/mobile/rome-tour.webp    1x,
@@ -666,6 +851,22 @@
                 <div class="trip-card__thumb">
                   <div class="trip-card__overlay"></div>
                   <picture>
+                    <source
+                    srcset="
+                      ./images/tablet/paris-tour.webp   1x,
+                      ./images/tablet/paris-tour@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/paris-tour.jpg   1x,
+                      ./images/tablet/paris-tour@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
                     <source
                       srcset="
                         ./images/mobile/paris-tour.webp    1x,
@@ -733,6 +934,22 @@
                   <div class="trip-card__overlay"></div>
                   <picture>
                     <source
+                    srcset="
+                      ./images/tablet/barcelona-tour.webp  1x,
+                      ./images/tablet/barcelona-tour@2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/barcelona-tour.jpg   1x,
+                      ./images/tablet/barcelona-tour@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
+                    <source
                       srcset="
                         ./images/mobile/barcelona-tour.webp    1x,
                         ./images/mobile/barcelona-tour@2x.webp 2x
@@ -798,6 +1015,22 @@
                 <div class="trip-card__thumb">
                   <div class="trip-card__overlay"></div>
                   <picture>
+                    <source
+                    srcset="
+                      ./images/tablet/budapesht-tour.webp  1x,
+                      ./images/tablet/budapesht-tour2x.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/tablet/budapesht-tour.jpg   1x,
+                      ./images/tablet/budapesht-tour2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/jpeg"
+                  />
                     <source
                       srcset="
                         ./images/mobile/budapesht-tour.webp    1x,
@@ -883,6 +1116,22 @@
               <picture>
                 <source
                   srcset="
+                    ./images/tablet/photo1.webp    1x,
+                    ./images/tablet/photo1@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo1.jpg   1x,
+                    ./images/tablet/photo1@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
                     ./images/mobile/photo1.webp    1x,
                     ./images/mobile/photo1@2x.webp 2x
                   "
@@ -909,6 +1158,22 @@
             <div class="galery-list__thumb">
               <div class="galery-list__overlay"></div>
               <picture>
+                <source
+                  srcset="
+                    ./images/tablet/photo2.webp   1x,
+                    ./images/tablet/photo2@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo2.jpg   1x,
+                    ./images/tablet/photo2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
                 <source
                   srcset="
                     ./images/mobile/photo2.webp    1x,
@@ -939,6 +1204,22 @@
               <picture>
                 <source
                   srcset="
+                    ./images/tablet/photo3.webp   1x,
+                    ./images/tablet/photo3@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo3.jpg   1x,
+                    ./images/tablet/photo3@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
                     ./images/mobile/photo3.webp    1x,
                     ./images/mobile/photo3@2x.webp 2x
                   "
@@ -965,6 +1246,22 @@
             <div class="galery-list__thumb">
               <div class="galery-list__overlay"></div>
               <picture>
+                <source
+                  srcset="
+                    ./images/tablet/photo4.webp   1x,
+                    ./images/tablet/photo4@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo4.jpg   1x,
+                    ./images/tablet/photo4@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
                 <source
                   srcset="
                     ./images/mobile/photo4.webp    1x,
@@ -1213,13 +1510,14 @@
           <h2 class="subscribe__title">Our Newsletter</h2>
           <form>
             <label class="subscribe__label" for="email"
-              >Email<input
-                class="subscribe__input"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email"
-            /></label>
+              >Email</label>
+              <input
+              class="subscribe__input"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+          />
             <button class="subscribe__btn" type="submit">Subscribe</button>
           </form>
         </div>
@@ -1299,6 +1597,7 @@
       </div>
     </footer>
     <script src="./js/menu.js"></script>
+    <script src="./js/slider.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
   </body>
 </html>

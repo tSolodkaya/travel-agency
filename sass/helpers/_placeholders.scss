@@ -1,5 +1,9 @@
 %section {
   padding: 80px 16px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    padding: 80px 20px;
+  }
 }
 
 %section-title {
@@ -19,11 +23,19 @@
     margin-top: 20px;
     background-color: $primary-color;
   }
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 54px;
+  }
 }
 
 %section-description {
   font-size: 18px;
   line-height: 1.2;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    font-size: 20px;
+  }
 }
 
 %overlay {

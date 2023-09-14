@@ -55,6 +55,11 @@ button {
     min-width: 320px;
   }
 }
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 0 20px 0px 20px;
+  }
+}
 
 .visually-hidden {
   position: absolute;
@@ -73,6 +78,11 @@ button {
 .footer, .expirience, .galery, .trips, .blog, .destinations {
   padding: 80px 16px;
 }
+@media screen and (min-width: 768px) {
+  .footer, .expirience, .galery, .trips, .blog, .destinations {
+    padding: 80px 20px;
+  }
+}
 
 .subscribe__title, .experience__title, .galery__title, .trips__title, .blog__title, .offers__title, .destinations__title {
   color: #172432;
@@ -90,10 +100,20 @@ button {
   margin-top: 20px;
   background-color: #ff7757;
 }
+@media screen and (min-width: 768px) {
+  .subscribe__title, .experience__title, .galery__title, .trips__title, .blog__title, .offers__title, .destinations__title {
+    font-size: 54px;
+  }
+}
 
 .experience__descr, .galery__descr, .trips__descr, .blog__descr, .offers__descr, .destinations__descr {
   font-size: 18px;
   line-height: 1.2;
+}
+@media screen and (min-width: 768px) {
+  .experience__descr, .galery__descr, .trips__descr, .blog__descr, .offers__descr, .destinations__descr {
+    font-size: 20px;
+  }
 }
 
 .galery-list__overlay, .trip-card__overlay, .post__overlay, .destination__overlay {
@@ -127,7 +147,12 @@ button {
 .header {
   position: relative;
   margin-bottom: 100px;
-  padding: 24px 32px 0 32px;
+  padding: 32px 20px;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 24px 32px 24px 32px;
+  }
 }
 
 @media screen and (max-width: 1151px) {
@@ -138,6 +163,7 @@ button {
     top: 100%;
     left: 0;
     right: 0;
+    height: 100vh;
     padding: 16px;
     background-color: #fff;
   }
@@ -180,19 +206,19 @@ button {
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1151px) {
   .menu__link {
     font-size: 30px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1151px) {
   .menu__item:not(:last-child) {
     margin-bottom: 16px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1151px) {
   .navigation {
     margin-bottom: 30px;
   }
@@ -227,18 +253,73 @@ button {
   color: #fff;
   font-family: "Playfair Display", serif;
   font-size: 40px;
+  font-weight: 400;
   margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    font-size: 54px;
+  }
 }
 
 .hero__descr {
   color: #fff;
   margin-bottom: 100px;
 }
-
-@media screen and (max-width: 767px) {
-  .hero__pagination {
-    display: none;
+@media screen and (min-width: 768px) {
+  .hero__descr {
+    font-size: 20px;
   }
+}
+
+.pagination {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .pagination {
+    position: absolute;
+    right: 20px;
+    top: 66px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.hero {
+  padding-top: 0 20px 0;
+  position: relative;
+}
+
+.pagination__btn {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.pagination__btn--active {
+  background-color: #ff7757;
+}
+
+.pagination__item {
+  margin-bottom: 34px;
+}
+
+.pagination__prev {
+  margin-bottom: 16px;
+}
+
+.pagination__icon {
+  stroke: #fff;
+  -webkit-transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pagination__prev:hover .pagination__icon, .pagination__next:hover .pagination__icon {
+  stroke: #ff7757;
 }
 
 .booking-form {
@@ -246,6 +327,15 @@ button {
   margin: 0 auto;
   background-color: #fff;
   border-radius: 16px;
+}
+@media screen and (min-width: 768px) {
+  .booking-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 659px;
+    margin-left: 0;
+  }
 }
 
 .input-container {
@@ -259,9 +349,27 @@ button {
   padding: 20px 20px 0 20px;
   margin-bottom: 60px;
 }
+@media screen and (min-width: 768px) {
+  .input-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 0;
+  }
+}
 
 .booking-form__lable {
   text-transform: uppercase;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .booking-form__lable {
+    font-size: 16px;
+  }
 }
 
 .booking-form__input {
@@ -299,6 +407,12 @@ button {
   color: #172432;
   font-family: "Playfair Display", serif;
 }
+@media screen and (min-width: 768px) {
+  .booking-form__input {
+    width: 158px;
+    font-size: 16px;
+  }
+}
 
 .booking-form__input:focus-within {
   border-bottom: 1px solid #ff7757;
@@ -330,6 +444,13 @@ button {
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+@media screen and (min-width: 768px) {
+  .booking-form__btn {
+    width: 170px;
+    padding: 60px 20px 60px 20px;
+    border-radius: 0 16px 16px 0;
+  }
+}
 
 .arrow-icon {
   fill: #fff;
@@ -338,10 +459,6 @@ button {
 
 .star-icon {
   fill: #ffc107;
-}
-
-.raiting--offers-margin {
-  margin-bottom: 24px;
 }
 
 .raiting__btn {
@@ -354,6 +471,9 @@ button {
 
 .raiting--feedback-margin {
   margin-bottom: 20px;
+}
+.raiting--offers-margin {
+  margin-bottom: 24px;
 }
 
 .destinations__descr {
@@ -369,6 +489,14 @@ button {
   position: relative;
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  .destinations-list__item {
+    max-width: 728px;
+  }
+}
+.destinations-list__item:not(:first-child) {
+  display: none;
+}
 
 .destinations-list__descr {
   position: absolute;
@@ -382,6 +510,17 @@ button {
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 16px;
+}
+@media screen and (min-width: 768px) {
+  .destination-list__place {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .destination-list__location {
+    font-size: 24px;
+  }
 }
 
 .location-icon {
@@ -402,6 +541,11 @@ button {
 .destination__overlay {
   border-radius: 16px;
 }
+@media screen and (min-width: 768px) {
+  .destination__overlay {
+    border-radius: 26px;
+  }
+}
 
 .icon-right {
   fill: #ff7757;
@@ -418,7 +562,7 @@ button {
 .slide-buttons--mobile {
   display: none;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1151px) {
   .slide-buttons--mobile {
     display: block;
     text-align: center;
@@ -428,18 +572,37 @@ button {
 .slide-buttons {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1152px) {
   .slide-buttons {
     display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .offers__title {
+    text-align: end;
+  }
+  .offers__title:after {
+    margin-left: auto;
   }
 }
 
 .offers__descr {
   margin-bottom: 60px;
 }
+@media screen and (min-width: 768px) {
+  .offers__descr {
+    text-align: end;
+  }
+}
 
 .offers-list {
   margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .offers-list {
+    margin-bottom: 100px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -455,6 +618,11 @@ button {
   border: 1px solid transparent;
   border-radius: 26px;
   overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .offer-card {
+    max-width: 728px;
+  }
 }
 
 .offer-card__meta {
@@ -473,17 +641,27 @@ button {
   line-height: 1.25;
   margin-bottom: 24px;
 }
+@media screen and (min-width: 768px) {
+  .offer-card__descr {
+    font-size: 18px;
+  }
+}
 
 .offer-card__price {
   margin-bottom: 20px;
 }
-
 .offer-card__price--accent {
   display: inline-block;
   vertical-align: middle;
   margin-left: 8px;
   color: #ff7757;
   font-size: 32px;
+}
+@media screen and (min-width: 768px) {
+  .offer-card__price {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
 
 .offer-card__details {
@@ -497,6 +675,18 @@ button {
   border-radius: 12px;
 }
 
+.price-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .blog__descr {
   margin-bottom: 100px;
 }
@@ -504,6 +694,11 @@ button {
 .blog-list__item {
   max-width: 288px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .blog-list__item {
+    max-width: 728px;
+  }
 }
 
 .post__thumb {
@@ -519,11 +714,19 @@ button {
   color: #172432;
   font-family: "Playfair Display", serif;
   font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+@media screen and (min-width: 768px) {
+  .post__title {
+    font-size: 54px;
+  }
 }
 
-.post__contant {
+.post__content {
   color: #172432;
   line-height: 2.3;
+  margin-bottom: 24px;
 }
 
 .post__link {
@@ -543,7 +746,7 @@ button {
 
 .trips__link {
   color: #fff;
-  font-family: Rubik;
+  font-family: "Rubik", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.2;
@@ -593,18 +796,21 @@ button {
   max-width: 288px;
   margin: 0 auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1151px) {
   .trips-list__item:not(:last-child) {
     margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .trips-list__item {
+    max-width: 728px;
   }
 }
 
 .trip-card__thumb {
   position: relative;
-}
-
-.trip-card__overlay {
   border-radius: 26px;
+  overflow: hidden;
 }
 
 .trip-card__meta {
@@ -631,9 +837,20 @@ button {
   line-height: 1.2;
   margin-bottom: 12px;
 }
+@media screen and (min-width: 768px) {
+  .trip-card__price,
+  .trip-card__days {
+    font-size: 24px;
+  }
+}
 
 .trip-card__guide {
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .trip-card__guide {
+    font-size: 24px;
+  }
 }
 
 .trip-card__name {
@@ -643,6 +860,11 @@ button {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 12px;
+}
+@media screen and (min-width: 768px) {
+  .trip-card__name {
+    font-size: 32px;
+  }
 }
 
 .galery__descr {
@@ -657,9 +879,14 @@ button {
   max-width: 288px;
   margin: 0 auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1151px) {
   .galery-list__item:not(:last-child) {
     margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .galery-list__item {
+    max-width: 728px;
   }
 }
 
@@ -690,6 +917,11 @@ button {
 .expirience-list__item:not(:first-child) {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .expirience-list__item {
+    max-width: 420px;
+  }
+}
 
 .feedback__message {
   font-size: 18px;
@@ -718,6 +950,13 @@ button {
   overflow: hidden;
 }
 
+.subscribe__title:after {
+  content: "";
+  width: 0;
+  height: 0;
+  background-color: none;
+}
+
 .form-container {
   max-width: 288px;
   margin: 0 auto;
@@ -725,6 +964,12 @@ button {
   -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
   border-radius: 26px;
+}
+@media screen and (min-width: 768px) {
+  .form-container {
+    max-width: 732px;
+    padding: 40px;
+  }
 }
 
 .subscribe__title {
@@ -734,6 +979,7 @@ button {
 
 .subscribe__label {
   font-size: 20px;
+  display: block;
 }
 
 .subscribe__input {
@@ -747,6 +993,13 @@ button {
   text-align: center;
   background-color: #ffe8d4;
   border-radius: 12px;
+}
+@media screen and (min-width: 768px) {
+  .subscribe__input {
+    display: inline-block;
+    max-width: 450px;
+    margin-right: 32px;
+  }
 }
 
 .subscribe__btn {
@@ -765,10 +1018,21 @@ button {
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+@media screen and (min-width: 768px) {
+  .subscribe__btn {
+    max-width: 160px;
+    padding: 24px 0;
+  }
+}
 
 .footer {
   background-color: #172432;
   color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding-top: 100px;
+  }
 }
 
 .footer__logo {
@@ -799,7 +1063,8 @@ button {
   margin-bottom: 60px;
 }
 
-.footer-info__phone {
+.footer-info__phone,
+.footer-info__mail {
   margin-bottom: 12px;
 }
 
@@ -816,4 +1081,36 @@ button {
 
 .social-list__item:not(:last-child) {
   margin-right: 24px;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+.slider__destination {
+  width: 288px;
+  height: 320px;
+}
+
+.slide {
+  width: 100%;
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.slide__destination {
+  max-width: 288px;
+  height: 320px;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slider-container {
+  display: grid;
+  place-items: center;
 }/*# sourceMappingURL=main.css.map */

@@ -1,5 +1,12 @@
 .subscribe__title {
   @extend %section-title;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: none;
+  }
 }
 
 .form-container {
@@ -8,6 +15,11 @@
   padding: 40px 20px;
   box-shadow: $subscribe-box-shadow;
   border-radius: 26px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    max-width: 732px;
+    padding: 40px;
+  }
 }
 
 .subscribe__title {
@@ -17,6 +29,7 @@
 
 .subscribe__label {
   font-size: 20px;
+  display: block;
 }
 
 .subscribe__input {
@@ -31,6 +44,12 @@
   text-align: center;
   background-color: $email-input-background-color;
   border-radius: 12px;
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    display: inline-block;
+    max-width: 450px;
+    margin-right: 32px;
+  }
 }
 
 .subscribe__btn {
@@ -46,5 +65,9 @@
 
   &:hover {
     box-shadow: $btn-hover-shadow;
+  }
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    max-width: 160px;
+    padding: 24px 0;
   }
 }

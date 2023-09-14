@@ -26,6 +26,10 @@
   &:not(:first-child) {
     display: none;
   }
+
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    max-width: 420px;
+  }
 }
 
 .feedback__message {
