@@ -1,6 +1,11 @@
 .socials-icon {
   fill: $text-color-light;
   display: block;
+
+  transition: fill 250ms $transition-function;
+  &:hover {
+    fill: $primary-color;
+  }
 }
 
 .social-list {

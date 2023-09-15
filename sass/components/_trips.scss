@@ -105,8 +105,25 @@
   @extend %overlay;
 }
 
+.trip-card {
+  transition: transform 250ms $transition-function;
+
+  &:hover {
+    transform: translateY(-40px);
+  }
+}
+
 .trip-card__meta {
   padding: 20px 0;
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    opacity: 0;
+    transition: opacity 250ms $transition-function;
+  }
+
+  .trip-card:hover & {
+    opacity: 1;
+  }
 }
 
 .rate-container,
