@@ -636,13 +636,23 @@ button {
   }
 }
 
+.destination-list {
+  width: 288px;
+  margin: 0 auto;
+}
 @media screen and (max-width: 1151px) {
   .destination-list {
     margin-bottom: 100px;
   }
 }
+@media screen and (min-width: 768px) {
+  .destination-list {
+    width: 728px;
+  }
+}
 @media screen and (min-width: 1152px) {
   .destination-list {
+    width: 1058px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -14,8 +14,9 @@
       rel="stylesheet"
     />
     <link
-      href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css "
       rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
   </head>
   <body>
@@ -177,12 +178,12 @@
             to natural wonders.
           </p>
           <div class="slide-buttons">
-            <button class="btn-prev" type="button">
+            <button class="btn-prev" type="button" data-prev-destinations>
               <svg class="icon-left" width="60" height="60">
                 <use href="./images/icons/icons.svg#slide-left" />
               </svg>
             </button>
-            <button class="btn-next" type="button">
+            <button class="btn-next" type="button" data-next-destinations>
               <svg class="icon-right" width="60" height="60">
                 <use href="./images/icons/icons.svg#slide-right" />
               </svg>
@@ -190,7 +191,7 @@
           </div>
         </div>
 
-        <ul class="destination-list">
+        <ul class="destination-list destination-slider">
           <li class="destinations-list__item">
             <a href="#">
               <div class="destination__thumb">
@@ -468,12 +469,12 @@
         </ul>
 
         <div class="slide-buttons--mobile">
-          <button class="btn-prev" type="button">
+          <button class="btn-prev" type="button" data-prev-destinations>
             <svg class="icon-left" width="60" height="60">
               <use href="./images/icons/icons.svg#slide-left" />
             </svg>
           </button>
-          <button class="btn-next" type="button">
+          <button class="btn-next" type="button" data-next-destinations>
             <svg class="icon-right" width="60" height="60">
               <use href="./images/icons/icons.svg#slide-right" />
             </svg>
@@ -498,7 +499,7 @@
             </button>
           </div>
         </div>
-        <ul class="offers-list">
+        <ul class="offers-list offers-slider">
           <li class="offers-list__item">
             <article class="offer-card">
               <picture>
@@ -1869,6 +1870,18 @@
       </div>
     </footer>
     <script src="./js/menu.js"></script>
-    <script src=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js "></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./js/slider.js"></script>
   </body>
 </html>
