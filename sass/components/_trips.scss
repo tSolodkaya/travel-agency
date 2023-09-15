@@ -106,10 +106,11 @@
 }
 
 .trip-card {
-  transition: transform 250ms $transition-function;
-
-  &:hover {
-    transform: translateY(-40px);
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    transition: transform 250ms $transition-function;
+    &:hover {
+      transform: translateY(-40px);
+    }
   }
 }
 

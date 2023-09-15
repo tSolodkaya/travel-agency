@@ -29,13 +29,6 @@
 .galery-list__item {
   max-width: 288px;
   margin: 0 auto;
-  cursor: pointer;
-
-  transition: transform 250ms $transition-function;
-
-  &:hover {
-    transform: translateY(-40px);
-  }
 
   @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
     &:not(:last-child) {
@@ -48,7 +41,13 @@
   }
 
   @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    cursor: pointer;
     max-width: 248px;
+    transition: transform 250ms $transition-function;
+
+    &:hover {
+      transform: translateY(-40px);
+    }
   }
 }
 
