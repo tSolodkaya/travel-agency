@@ -487,12 +487,12 @@
         <div class="desctop-slide-btn-wrap desctop-slide-btn-wrap--offers">
           <p class="offers__descr">Check out our special offer and discounts</p>
           <div class="slide-buttons">
-            <button class="btn-prev" type="button">
+            <button class="btn-prev" type="button" data-prev-offers>
               <svg class="icon-left" width="60" height="60">
                 <use href="./images/icons/icons.svg#slide-left" />
               </svg>
             </button>
-            <button class="btn-next" type="button">
+            <button class="btn-next" type="button" data-next-offers>
               <svg class="icon-right" width="60" height="60">
                 <use href="./images/icons/icons.svg#slide-right" />
               </svg>
@@ -791,14 +791,596 @@
               </div>
             </article>
           </li>
+          <li class="offers-list__item">
+            <article class="offer-card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/portugal-desc.webp    1x,
+                    ./images/desctop/portugal-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/desctop/portugal-desc.jpg  1x,
+                    ./images/desctop/photo4-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/lisbon.webp    1x,
+                    ./images/tablet/lisbon@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/lisbon.jpg    1x,
+                    ./images/tablet/lisbon@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/portugal.webp    1x,
+                    ./images/mobile/portugal@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile/portugal.jpg    1x,
+                    ./images/mobile/portugal@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/mobile/portugal.jpg"
+                  alt="Lisbon, Portugal"
+                />
+              </picture>
+              <div class="offer-card__meta">
+                <h3 class="offer-card__title">Lisbon, Portugal</h3>
+                <div class="raiting raiting--offers-margin">
+                  <button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="offer-card__descr">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical literature.
+                </p>
+                <div class="price-container">
+                  <p class="offer-card__price">
+                    From
+                    <span class="offer-card__price--accent">&#8364;500</span>
+                  </p>
+                  <a class="offer-card__details" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="offers-list__item">
+            <article class="offer-card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/greece-desc.webp    1x,
+                    ./images/desctop/greece-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/desctop/greece-desc.jpg    1x,
+                    ./images/desctop/greece-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/greece.webp    1x,
+                    ./images/tablet/greece@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/greece.jpg    1x,
+                    ./images/tablet/greece@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/greece.webp    1x,
+                    ./images/mobile/greece@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile/greece.jpg    1x,
+                    ./images/mobile/greece@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/mobile/greece.jpg" alt="Athens, Greece" />
+              </picture>
+              <div class="offer-card__meta">
+                <h3 class="offer-card__title">Athens, Greece</h3>
+                <div class="raiting raiting--offers-margin">
+                  <button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="offer-card__descr">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical literature.
+                </p>
+                <div class="price-container">
+                  <p class="offer-card__price">
+                    From
+                    <span class="offer-card__price--accent">&#8364;800</span>
+                  </p>
+                  <a class="offer-card__details" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="offers-list__item">
+            <article class="offer-card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/rome-desc.webp    1x,
+                    ./images/desctop/rome-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/desctop/rome-desc.jpg    1x,
+                    ./images/desctop/rome-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/rome.webp    1x,
+                    ./images/tablet/rome@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/rome.jpg    1x,
+                    ./images/tablet/rome@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/rome.webp    1x,
+                    ./images/mobile/rome@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile/rome.jpg    1x,
+                    ./images/mobile/rome@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/mobile/rome.jpg" alt="Rome, Italy" />
+              </picture>
+              <div class="offer-card__meta">
+                <h3 class="offer-card__title">Rome, Italy</h3>
+                <div class="raiting--offers-margin">
+                  <button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="offer-card__descr">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical literature.
+                </p>
+                <div class="price-container">
+                  <p class="offer-card__price">
+                    From
+                    <span class="offer-card__price--accent">&#8364;750</span>
+                  </p>
+                  <a class="offer-card__details" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="offers-list__item">
+            <article class="offer-card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/portugal-desc.webp    1x,
+                    ./images/desctop/portugal-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/desctop/portugal-desc.jpg  1x,
+                    ./images/desctop/photo4-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/lisbon.webp    1x,
+                    ./images/tablet/lisbon@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/lisbon.jpg    1x,
+                    ./images/tablet/lisbon@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/portugal.webp    1x,
+                    ./images/mobile/portugal@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile/portugal.jpg    1x,
+                    ./images/mobile/portugal@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  src="./images/mobile/portugal.jpg"
+                  alt="Lisbon, Portugal"
+                />
+              </picture>
+              <div class="offer-card__meta">
+                <h3 class="offer-card__title">Lisbon, Portugal</h3>
+                <div class="raiting raiting--offers-margin">
+                  <button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="offer-card__descr">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical literature.
+                </p>
+                <div class="price-container">
+                  <p class="offer-card__price">
+                    From
+                    <span class="offer-card__price--accent">&#8364;500</span>
+                  </p>
+                  <a class="offer-card__details" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="offers-list__item">
+            <article class="offer-card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/greece-desc.webp    1x,
+                    ./images/desctop/greece-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/desctop/greece-desc.jpg    1x,
+                    ./images/desctop/greece-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/greece.webp    1x,
+                    ./images/tablet/greece@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/greece.jpg    1x,
+                    ./images/tablet/greece@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/greece.webp    1x,
+                    ./images/mobile/greece@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile/greece.jpg    1x,
+                    ./images/mobile/greece@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/mobile/greece.jpg" alt="Athens, Greece" />
+              </picture>
+              <div class="offer-card__meta">
+                <h3 class="offer-card__title">Athens, Greece</h3>
+                <div class="raiting raiting--offers-margin">
+                  <button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="offer-card__descr">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical literature.
+                </p>
+                <div class="price-container">
+                  <p class="offer-card__price">
+                    From
+                    <span class="offer-card__price--accent">&#8364;800</span>
+                  </p>
+                  <a class="offer-card__details" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="offers-list__item">
+            <article class="offer-card">
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/rome-desc.webp    1x,
+                    ./images/desctop/rome-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/desctop/rome-desc.jpg    1x,
+                    ./images/desctop/rome-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/rome.webp    1x,
+                    ./images/tablet/rome@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/tablet/rome.jpg    1x,
+                    ./images/tablet/rome@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/rome.webp    1x,
+                    ./images/mobile/rome@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/mobile/rome.jpg    1x,
+                    ./images/mobile/rome@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img src="./images/mobile/rome.jpg" alt="Rome, Italy" />
+              </picture>
+              <div class="offer-card__meta">
+                <h3 class="offer-card__title">Rome, Italy</h3>
+                <div class="raiting--offers-margin">
+                  <button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg></button
+                  ><button class="raiting__btn">
+                    <svg class="star-icon" width="24" height="24">
+                      <use href="./images/icons/icons.svg#star"></use>
+                    </svg>
+                  </button>
+                </div>
+                <p class="offer-card__descr">
+                  5 nights and 4 days in 5 star hotel, breakfast and lunch
+                  included. Very popular during the renaissance. Passage and
+                  going through the cites of the world in classical literature.
+                </p>
+                <div class="price-container">
+                  <p class="offer-card__price">
+                    From
+                    <span class="offer-card__price--accent">&#8364;750</span>
+                  </p>
+                  <a class="offer-card__details" href="#">Details</a>
+                </div>
+              </div>
+            </article>
+          </li>
         </ul>
         <div class="slide-buttons--mobile">
-          <button class="btn-prev" type="button">
+          <button class="btn-prev" type="button" data-prev-offers>
             <svg class="icon-left" width="60" height="60">
               <use href="./images/icons/icons.svg#slide-left" />
             </svg>
           </button>
-          <button class="btn-next" type="button">
+          <button class="btn-next" type="button" data-next-offers>
             <svg class="icon-right" width="60" height="60">
               <use href="./images/icons/icons.svg#slide-right" />
             </svg>
@@ -1315,19 +1897,259 @@
         <div class="desctop-slide-btn-wrap">
           <p class="galery__descr">Our photo gallery on trip</p>
           <div class="slide-buttons">
-            <button class="btn-prev" type="button">
+            <button class="btn-prev" type="button" data-prev-galery>
               <svg class="icon-left" width="60" height="60">
                 <use href="./images/icons/icons.svg#slide-left" />
               </svg>
             </button>
-            <button class="btn-next" type="button">
+            <button class="btn-next" type="button" data-next-galery>
               <svg class="icon-right" width="60" height="60">
                 <use href="./images/icons/icons.svg#slide-right" />
               </svg>
             </button>
           </div>
         </div>
-        <ul class="galery-list">
+        <ul class="galery-list galery-slider">
+          <li class="galery-list__item">
+            <div class="galery-list__thumb">
+              <div class="galery-list__overlay"></div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/photo1-desc.webp    1x,
+                    ./images/desctop/photo1-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/photo1-desc.jpg    1x,
+                    ./images/desctop/photo1-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo1.webp    1x,
+                    ./images/tablet/photo1@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo1.jpg    1x,
+                    ./images/tablet/photo1@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo1.webp    1x,
+                    ./images/mobile/photo1@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo1.jpg    1x,
+                    ./images/mobile/photo1@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/mobile/photo1.jpg"
+                  alt="A man is walking on railways with photocamera"
+                />
+              </picture>
+            </div>
+          </li>
+          <li class="galery-list__item">
+            <div class="galery-list__thumb">
+              <div class="galery-list__overlay"></div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/photo2-desc.webp    1x,
+                    ./images/desctop/photo2-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/photo2-desc.jpg    1x,
+                    ./images/desctop/photo2-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo2.webp    1x,
+                    ./images/tablet/photo2@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo2.jpg    1x,
+                    ./images/tablet/photo2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo2.webp    1x,
+                    ./images/mobile/photo2@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo2.jpg    1x,
+                    ./images/mobile/photo2@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/mobile/photo2.jpg"
+                  alt="A man is walking on skinny street"
+                />
+              </picture>
+            </div>
+          </li>
+          <li class="galery-list__item">
+            <div class="galery-list__thumb">
+              <div class="galery-list__overlay"></div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/photo3-desc.webp    1x,
+                    ./images/desctop/photo3-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/photo3-desc.jpg    1x,
+                    ./images/desctop/photo3-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo3.webp    1x,
+                    ./images/tablet/photo3@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo3.jpg    1x,
+                    ./images/tablet/photo3@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo3.webp    1x,
+                    ./images/mobile/photo3@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo3.jpg    1x,
+                    ./images/mobile/photo3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/mobile/photo3.jpg"
+                  alt="A cuple seeting on the send ofthe sea beach"
+                />
+              </picture>
+            </div>
+          </li>
+          <li class="galery-list__item">
+            <div class="galery-list__thumb">
+              <div class="galery-list__overlay"></div>
+              <picture>
+                <source
+                  srcset="
+                    ./images/desctop/photo4-desc.webp    1x,
+                    ./images/desctop/photo4-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/photo4-desc.jpg    1x,
+                    ./images/desctop/photo4-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo4.webp    1x,
+                    ./images/tablet/photo4@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo4.jpg    1x,
+                    ./images/tablet/photo4@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo4.webp    1x,
+                    ./images/mobile/photo4@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/photo4.jpg    1x,
+                    ./images/mobile/photo4@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/mobile/photo4.jpg"
+                  alt="A man staying in fron of the painting wall"
+                />
+              </picture>
+            </div>
+          </li>
           <li class="galery-list__item">
             <div class="galery-list__thumb">
               <div class="galery-list__overlay"></div>
@@ -1570,12 +2392,12 @@
           </li>
         </ul>
         <div class="slide-buttons--mobile">
-          <button class="btn-prev" type="button">
+          <button class="btn-prev" type="button" data-prev-galery>
             <svg class="icon-left" width="60" height="60">
               <use href="./images/icons/icons.svg#slide-left" />
             </svg>
           </button>
-          <button class="btn-next" type="button">
+          <button class="btn-next" type="button" data-next-galery>
             <svg class="icon-right" width="60" height="60">
               <use href="./images/icons/icons.svg#slide-right" />
             </svg>
@@ -1588,7 +2410,7 @@
         <p class="experience__descr">
           Here some awesome feedback from our travelers
         </p>
-        <ul class="expirience-list">
+        <ul class="expirience-list expirience-slider">
           <li class="expirience-list__item">
             <article class="feedback">
               <div class="avatar-container">
@@ -1762,12 +2584,12 @@
           </li>
         </ul>
         <div class="feedback-slides slide-buttons--mobile">
-          <button class="btn-prev" type="button">
+          <button class="btn-prev" type="button" data-prev-exp>
             <svg class="icon-left" width="60" height="60">
               <use href="./images/icons/icons.svg#slide-left" />
             </svg>
           </button>
-          <button class="btn-next" type="button">
+          <button class="btn-next" type="button" data-next-exp>
             <svg class="icon-right" width="60" height="60">
               <use href="./images/icons/icons.svg#slide-right" />
             </svg>

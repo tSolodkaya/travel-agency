@@ -20,9 +20,16 @@
 }
 
 .expirience-list {
+  width: 288px;
+  margin: 0 auto;
   margin-bottom: 100px;
 
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    width: 420px;
+  }
+
   @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    width: 100%;
     margin-bottom: 160px;
     display: flex;
     flex-wrap: wrap;
@@ -39,6 +46,7 @@
   background-color: $feedback-background-color;
   border-radius: 12px;
   padding: 60px 20px 32px 20px;
+  margin-top: 70px;
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     max-width: 420px;
@@ -46,6 +54,9 @@
 
   @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
     max-width: 500px;
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
   }
 }
 

@@ -15,9 +15,16 @@
 }
 
 .galery-list {
+  width: 288px;
+  margin: 0 auto;
   margin-bottom: 100px;
 
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    width: 728px;
+  }
+
   @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    width: 1088px;
     margin-bottom: 0;
     display: flex;
     flex-wrap: wrap;
@@ -42,8 +49,13 @@
 
   @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
     cursor: pointer;
+    padding-top: 40px;
     max-width: 248px;
     transition: transform 250ms $transition-function;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
 
     &:hover {
       transform: translateY(-40px);
