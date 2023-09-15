@@ -9,6 +9,9 @@
 .trips__descr {
   @extend %section-description;
   margin-bottom: 32px;
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    margin-bottom: 0;
+  }
 }
 
 .trips__link {
@@ -34,7 +37,10 @@
   margin-top: 20px;
   display: inline-block;
   position: relative;
-  margin-bottom: 80px;
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    margin: 0;
+  }
 
   &::before {
     content: "";
@@ -62,6 +68,14 @@
   }
 }
 
+.trips-list {
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+}
 .trips-list__item {
   max-width: 288px;
   margin: 0 auto;
@@ -74,6 +88,10 @@
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     max-width: 728px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    max-width: 250px;
   }
 }
 
@@ -98,23 +116,27 @@
   justify-content: space-between;
 }
 
+.trip-card__price {
+  margin-bottom: 12px;
+}
+
 .trip-card__price,
 .trip-card__days {
   color: $text-color-headers;
   font-size: 18px;
   line-height: 1.2;
-  margin-bottom: 12px;
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     font-size: 24px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    font-size: 18px;
   }
 }
 
 .trip-card__guide {
   text-transform: uppercase;
-  @media screen and (min-width: map-get($breakpoints, "tablet")) {
-    font-size: 24px;
-  }
 }
 
 .trip-card__name {
@@ -127,6 +149,9 @@
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     font-size: 32px;
   }
-
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    font-size: 28px;
+    font-weight: 600;
+  }
   margin-bottom: 12px;
 }

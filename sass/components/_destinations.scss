@@ -8,11 +8,22 @@
 
 .destinations__descr {
   @extend %section-description;
-  margin-bottom: 100px;
+
+  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+    max-width: 884px;
+  }
 }
 
 .destination-list {
-  margin-bottom: 100px;
+  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+    margin-bottom: 100px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
 }
 
 .destinations-list__item {
@@ -22,12 +33,12 @@
     max-width: 728px;
   }
 
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    max-width: 497px;
+  }
+
   position: relative;
   margin: 0 auto;
-
-  &:not(:first-child) {
-    display: none;
-  }
 }
 
 .destinations-list__descr {

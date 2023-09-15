@@ -1,3 +1,9 @@
+.subscribe {
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    transform: translateY(50%);
+  }
+}
+
 .subscribe__title {
   @extend %section-title;
 
@@ -15,16 +21,32 @@
   padding: 40px 20px;
   box-shadow: $subscribe-box-shadow;
   border-radius: 26px;
+  background-color: $text-color-light;
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     max-width: 732px;
     padding: 40px;
   }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    position: relative;
+
+    max-width: 1080px;
+    padding: 60px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .subscribe__title {
   color: $text-color-paragraph;
-  margin-bottom: 60px;
+
+  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+    margin-bottom: 60px;
+  }
+  margin-bottom: 0;
 }
 
 .subscribe__label {
@@ -49,11 +71,22 @@
     display: inline-block;
     max-width: 450px;
     margin-right: 32px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    width: 378px;
   }
 }
 
+.desctop-form-wrap {
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    display: flex;
+    align-items: flex-end;
+  }
+}
 .subscribe__btn {
-  padding: 16px 0;
+  padding: 24px 0;
   width: 100%;
 
   color: $text-color-light;

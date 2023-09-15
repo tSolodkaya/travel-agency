@@ -8,11 +8,22 @@
 
 .galery__descr {
   @extend %section-description;
-  margin-bottom: 100px;
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    margin-bottom: 0;
+  }
 }
 
 .galery-list {
   margin-bottom: 100px;
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+  }
 }
 
 .galery-list__item {
@@ -27,6 +38,10 @@
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     max-width: 728px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    max-width: 248px;
   }
 }
 

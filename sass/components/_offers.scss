@@ -1,3 +1,7 @@
+.offers {
+  @extend %section;
+}
+
 .offers__title {
   @extend %section-title;
 
@@ -11,9 +15,14 @@
 
 .offers__descr {
   @extend %section-description;
-  margin-bottom: 60px;
+
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     text-align: end;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    margin-bottom: 0px;
+    max-width: 884px;
   }
 }
 
@@ -23,13 +32,13 @@
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     margin-bottom: 100px;
   }
-}
 
-.offers-list__item {
-  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
-    &:not(:first-child) {
-      display: none;
-    }
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-bottom: 0;
   }
 }
 
@@ -43,6 +52,10 @@
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     max-width: 728px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    max-width: 342px;
   }
 }
 
@@ -98,7 +111,9 @@
 }
 
 .price-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

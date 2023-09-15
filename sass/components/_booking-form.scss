@@ -3,9 +3,17 @@
   margin: 0 auto;
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
+    transform: translateX(-20px);
     display: flex;
     max-width: 659px;
     margin-left: 0;
+    border-radius: 0 16px 16px 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    transform: translateX(-30px);
+    max-width: 1056px;
+    align-items: center;
   }
 
   background-color: $text-color-light;
@@ -15,14 +23,19 @@
 .input-container {
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 0 20px;
-  margin-bottom: 60px;
+  padding: 20px 20px 80px 20px;
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 40px;
     margin-bottom: 0;
+    padding: 20px 100px 20px 32px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    padding: 0 0 0 32px;
   }
 }
 .booking-form__lable {
@@ -37,8 +50,14 @@
   display: block;
   width: 100%;
   margin-top: 12px;
+
   margin-bottom: 40px;
   padding-bottom: 12px;
+
+  &--margin {
+    margin-bottom: 0;
+  }
+
   border: 1px solid transparent;
   border-bottom: 1px solid $booking-form-input-border-color;
   outline: none;
@@ -56,6 +75,7 @@
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     width: 158px;
     font-size: 16px;
+    margin-bottom: 0;
   }
 }
 
@@ -84,8 +104,13 @@
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     width: 170px;
-    padding: 60px 20px 60px 20px;
+    padding: 60px 20px;
     border-radius: 0 16px 16px 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    padding: 40px 20px;
+    margin-left: auto;
   }
 }
 

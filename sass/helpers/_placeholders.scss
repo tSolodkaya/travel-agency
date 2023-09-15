@@ -4,6 +4,10 @@
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     padding: 80px 20px;
   }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    padding: 100px 32px;
+  }
 }
 
 %section-title {
@@ -27,6 +31,10 @@
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     font-size: 54px;
   }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    font-size: 64px;
+  }
 }
 
 %section-description {
@@ -35,6 +43,12 @@
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     font-size: 20px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    display: inline-block;
+    max-width: 884px;
+    font-size: 24px;
   }
 }
 

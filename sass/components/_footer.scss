@@ -7,6 +7,14 @@
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     padding-top: 100px;
   }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 240px;
+    padding-bottom: 140px;
+  }
 }
 
 .footer__logo {
@@ -43,4 +51,8 @@
 .footer-info__phone,
 .footer-info__mail {
   margin-bottom: 12px;
+}
+
+.logo__icon--footer {
+  fill: $text-color-light;
 }

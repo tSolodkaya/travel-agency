@@ -12,17 +12,44 @@
 }
 
 .blog-list__item {
-  max-width: 288px;
+  margin: 0 auto;
+  @media screen and (max-width: map-get($breakpoints, "to-tablet")) {
+    max-width: 288px;
+  }
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     max-width: 728px;
   }
-  margin: 0 auto;
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    max-width: 100%;
+  }
+}
+
+.post {
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+  }
+}
+
+.blog-descr-wrap {
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    max-width: 528px;
+    padding: 32px 0;
+  }
 }
 
 .post__thumb {
   position: relative;
   margin-bottom: 32px;
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    width: 528px;
+    margin-bottom: 0;
+  }
 }
 
 .post__overlay {

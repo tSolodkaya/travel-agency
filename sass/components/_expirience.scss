@@ -1,5 +1,9 @@
 .expirience {
   @extend %section;
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    padding-bottom: 0;
+  }
 }
 
 .experience__title {
@@ -9,10 +13,23 @@
 .experience__descr {
   @extend %section-description;
   margin-bottom: 100px;
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    margin-bottom: 160px;
+  }
 }
 
 .expirience-list {
   margin-bottom: 100px;
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    margin-bottom: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 32px;
+  }
 }
 
 .expirience-list__item {
@@ -23,12 +40,12 @@
   border-radius: 12px;
   padding: 60px 20px 32px 20px;
 
-  &:not(:first-child) {
-    display: none;
-  }
-
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     max-width: 420px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    max-width: 500px;
   }
 }
 
@@ -58,4 +75,13 @@
   border-radius: 50%;
 
   overflow: hidden;
+}
+
+.feedback-slides {
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    &.slide-buttons--mobile {
+      display: block;
+      text-align: end;
+    }
+  }
 }

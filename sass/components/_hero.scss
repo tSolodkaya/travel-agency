@@ -8,6 +8,10 @@
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     font-size: 54px;
   }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    font-size: 64px;
+  }
 }
 
 .hero__descr {
@@ -16,6 +20,11 @@
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     font-size: 20px;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    font-size: 24px;
+    margin-bottom: 140px;
   }
 }
 
@@ -32,13 +41,14 @@
 }
 
 .hero {
-  padding-top: 0 20px 0;
+  padding: 0 20px 0;
   position: relative;
 }
 
 .pagination__btn {
   width: 16px;
   height: 16px;
+  display: block;
   border-radius: 50%;
   background-color: $text-color-light;
 
@@ -48,11 +58,18 @@
 }
 
 .pagination__item {
-  margin-bottom: 34px;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &--prev.pagination__item {
+    margin-bottom: 16px;
+  }
 }
 
-.pagination__prev {
-  margin-bottom: 16px;
+.pagination__prev,
+.pagination__next {
+  display: block;
 }
 
 .pagination__icon {

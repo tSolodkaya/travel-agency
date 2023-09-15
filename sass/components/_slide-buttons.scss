@@ -10,6 +10,16 @@
   margin-left: 24px;
 }
 
+.btn-prev,
+.btn-next {
+  width: 60px;
+  height: 57px;
+  border-radius: 12px;
+  &:hover {
+    box-shadow: $btn-hover-shadow;
+  }
+}
+
 .slide-buttons--mobile {
   display: none;
   @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
@@ -22,5 +32,20 @@
   display: none;
   @media screen and (min-width: map-get($breakpoints,"desctop-s")) {
     display: block;
+  }
+}
+
+.desctop-slide-btn-wrap {
+  margin-bottom: 100px;
+
+  @media screen and (min-width: map-get($breakpoints,"desctop-s")) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--offers {
+    flex-direction: row-reverse;
+    align-items: center;
   }
 }

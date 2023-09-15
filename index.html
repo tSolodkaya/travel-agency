@@ -62,7 +62,11 @@
           </nav>
 
           <div class="authentification">
-            <a class="authentification__link" href="#">Login</a>
+            <a
+              class="authentification__link authentification__link--login"
+              href="#"
+              >Login</a
+            >
             <a
               class="authentification__link authentification__link--signin"
               href="#"
@@ -93,14 +97,14 @@
           <li class="pagination__item">
             <button class="pagination__btn"></button>
           </li>
-          <li>
+          <li class="pagination__item pagination__item--prev">
             <button class="pagination__prev">
               <svg class="pagination__icon" width="16" height="8">
                 <use href="./images/icons/pagination.svg#arrow-prev"></use>
               </svg>
             </button>
           </li>
-          <li>
+          <li class="pagination__item pagination__item--next">
             <button class="pagination__next">
               <svg class="pagination__icon" width="16" height="8">
                 <use
@@ -147,7 +151,7 @@
             <label class="booking-form__lable" for="check-out"
               >Check out
               <input
-                class="booking-form__input"
+                class="booking-form__input booking-form__input--margin"
                 type="date"
                 name="check-in"
                 id="check-in"
@@ -155,7 +159,7 @@
             </label>
           </div>
           <button class="booking-form__btn" type="submit">
-            Book now
+            Book Now
             <svg class="arrow-icon" width="22" height="16">
               <use href="./images/icons/icons.svg#arrow" />
             </svg>
@@ -166,29 +170,46 @@
     <main>
       <section class="destinations container">
         <h2 class="destinations__title">Popular Destinations</h2>
-        <p class="destinations__descr">
-          Most popular destinations around the world, from historical places to
-          natural wonders.
-        </p>
-        <div class="slide-buttons">
-          <button class="btn-prev" type="button">
-            <svg class="icon-left" width="60" height="60">
-              <use href="./images/icons/icons.svg#slide-left" />
-            </svg>
-          </button>
-          <button class="btn-next" type="button">
-            <svg class="icon-right" width="60" height="60">
-              <use href="./images/icons/icons.svg#slide-right" />
-            </svg>
-          </button>
+        <div class="desctop-slide-btn-wrap">
+          <p class="destinations__descr">
+            Most popular destinations around the world, from historical places
+            to natural wonders.
+          </p>
+          <div class="slide-buttons">
+            <button class="btn-prev" type="button">
+              <svg class="icon-left" width="60" height="60">
+                <use href="./images/icons/icons.svg#slide-left" />
+              </svg>
+            </button>
+            <button class="btn-next" type="button">
+              <svg class="icon-right" width="60" height="60">
+                <use href="./images/icons/icons.svg#slide-right" />
+              </svg>
+            </button>
+          </div>
         </div>
-
         <ul class="destination-list">
           <li class="destinations-list__item">
             <a href="#">
               <div class="destination__thumb">
                 <div class="destination__overlay"></div>
                 <picture>
+                  <source
+                    srcset="
+                      ./images/desctop/berlin.webp    1x,
+                      ./images/desctop/berlin@2x.webp 2x
+                    "
+                    media="(min-width: 1152px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/desctop/berlin.jpg    1x,
+                      ./images/desctop/berlin@2x.jpg 2x
+                    "
+                    media="(min-width: 1152px)"
+                    type="image/jpeg"
+                  />
                   <source
                     srcset="
                       ./images/tablet/berlin.webp    1x,
@@ -244,6 +265,22 @@
               <picture>
                 <source
                   srcset="
+                    ./images/desctop/london.webp         1x,
+                    ./images/desctop/london-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/london.jpg         1x,
+                    ./images/desctop/london-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
                     ./images/tablet/london.webp    1x,
                     ./images/tablet/london@2x.webp 2x
                   "
@@ -297,6 +334,22 @@
               <picture>
                 <source
                   srcset="
+                    ./images/desctop/venice-desc.webp    1x,
+                    ./images/desctop/venice-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/venice-desc.jpg    1x,
+                    ./images/desctop/venice-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
                     ./images/tablet/africa.webp    1x,
                     ./images/tablet/africa@2x.webp 2x
                   "
@@ -346,6 +399,22 @@
           <li class="destinations-list__item">
             <a href="#">
               <picture>
+                <source
+                  srcset="
+                    ./images/desctop/lisbon-desc.jpg    1x,
+                    ./images/desctop/lisbon-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/lisbon-desc.webp    1x,
+                    ./images/desctop/lisbon-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
                 <source
                   srcset="
                     ./images/tablet/asia.webp    1x,
@@ -412,23 +481,42 @@
 
       <section class="offers container">
         <h2 class="offers__title">Special Offer</h2>
-        <p class="offers__descr">Check out our special offer and discounts</p>
-        <div class="slide-buttons">
-          <button class="btn-prev" type="button">
-            <svg class="icon-left" width="60" height="60">
-              <use href="./images/icons/icons.svg#slide-left" />
-            </svg>
-          </button>
-          <button class="btn-next" type="button">
-            <svg class="icon-right" width="60" height="60">
-              <use href="./images/icons/icons.svg#slide-right" />
-            </svg>
-          </button>
+        <div class="desctop-slide-btn-wrap desctop-slide-btn-wrap--offers">
+          <p class="offers__descr">Check out our special offer and discounts</p>
+          <div class="slide-buttons">
+            <button class="btn-prev" type="button">
+              <svg class="icon-left" width="60" height="60">
+                <use href="./images/icons/icons.svg#slide-left" />
+              </svg>
+            </button>
+            <button class="btn-next" type="button">
+              <svg class="icon-right" width="60" height="60">
+                <use href="./images/icons/icons.svg#slide-right" />
+              </svg>
+            </button>
+          </div>
         </div>
         <ul class="offers-list">
           <li class="offers-list__item">
             <article class="offer-card">
               <picture>
+                <source
+                  srcset="
+                    ./images/desctop/portugal-desc.webp    1x,
+                    ./images/desctop/portugal-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/desctop/portugal-desc.jpg  1x,
+                    ./images/desctop/photo4-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
                 <source
                   srcset="
                     ./images/tablet/lisbon.webp    1x,
@@ -513,6 +601,23 @@
               <picture>
                 <source
                   srcset="
+                    ./images/desctop/greece-desc.webp    1x,
+                    ./images/desctop/greece-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/desctop/greece-desc.jpg    1x,
+                    ./images/desctop/greece-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
                     ./images/tablet/greece.webp    1x,
                     ./images/tablet/greece@2x.webp 2x
                   "
@@ -590,6 +695,23 @@
           <li class="offers-list__item">
             <article class="offer-card">
               <picture>
+                <source
+                  srcset="
+                    ./images/desctop/rome-desc.webp    1x,
+                    ./images/desctop/rome-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/webp"
+                />
+
+                <source
+                  srcset="
+                    ./images/desctop/rome-desc.jpg    1x,
+                    ./images/desctop/rome-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1152px)"
+                  type="image/jpeg"
+                />
                 <source
                   srcset="
                     ./images/tablet/rome.webp    1x,
@@ -694,6 +816,22 @@
                 <picture>
                   <source
                     srcset="
+                      ./images/desctop/blog-desc.webp    1x,
+                      ./images/desctop/blog-desc@2x.webp 2x
+                    "
+                    media="(min-width: 1152px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/desctop/blog-desc.jpg    1x,
+                      ./images/desctop/blog-desc@2x.jpg 2x
+                    "
+                    media="(min-width: 1152px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
                       ./images/tablet/blog.webp    1x,
                       ./images/tablet/blog@2x.webp 2x
                     "
@@ -731,24 +869,33 @@
                   />
                 </picture>
               </div>
-              <h3 class="post__title">Beautiful Italy </br> Let’s travel</h3>
-              <p class="post__content">
-                But I must explain to you how all this mistaken idea of
-                denouncing pleasure and praising pain was born and I will give
-                you a complete account of the system and expound the actual
-                teachings of the great explorer of the truth, the master-
-                builder of human happiness. No one rejects, dislike, or avoids
-                plasure itself, because it is pleasure, but because those who do
-                not know how to pursue pleasure rationally encounter
-                consequences that are extremly painful. Nor again is there
-                anyone who loves or pursues.
-              </p>
-              <a class="post__link" href="#"
-                >Read More
-                <svg class="arrow-icon arrow-icon--post" width="22" height="16">
-                  <use href="./images/icons/icons.svg#arrow" />
-                </svg>
-              </a>
+              <div class="blog-descr-wrap">
+                <h3 class="post__title">
+                  Beautiful Italy <br />
+                  Let’s travel
+                </h3>
+                <p class="post__content">
+                  But I must explain to you how all this mistaken idea of
+                  denouncing pleasure and praising pain was born and I will give
+                  you a complete account of the system and expound the actual
+                  teachings of the great explorer of the truth, the master-
+                  builder of human happiness. No one rejects, dislike, or avoids
+                  plasure itself, because it is pleasure, but because those who
+                  do not know how to pursue pleasure rationally encounter
+                  consequences that are extremly painful. Nor again is there
+                  anyone who loves or pursues.
+                </p>
+                <a class="post__link" href="#"
+                  >Read More
+                  <svg
+                    class="arrow-icon arrow-icon--post"
+                    width="22"
+                    height="16"
+                  >
+                    <use href="./images/icons/icons.svg#arrow" />
+                  </svg>
+                </a>
+              </div>
             </article>
           </li>
         </ul>
@@ -756,15 +903,16 @@
 
       <section class="trips container">
         <h2 class="trips__title">Trip Planners</h2>
-        <p class="trips__descr">
-          20 years from now you will be more disappointed by the things that you
-          didn’t do. Stop regretting and start travelling, start throwing off
-          the bowlines.
-        </p>
-        <div class="link-container">
-          <a class="trips__link" href="#"> View all trip plans </a>
+        <div class="desctop-slide-btn-wrap">
+          <p class="trips__descr trips__descr--trips">
+            20 years from now you will be more disappointed by the things that
+            you didn’t do. Stop regretting and start travelling, start throwing
+            off the bowlines.
+          </p>
+          <div class="link-container">
+            <a class="trips__link" href="#"> View all trip plans </a>
+          </div>
         </div>
-
         <ul class="trips-list">
           <li class="trips-list__item">
             <article class="trip-card">
@@ -773,120 +921,57 @@
                   <div class="trip-card__overlay"></div>
                   <picture>
                     <source
-                    srcset="
-                      ./images/tablet/rome-tour.webp    1x,
-                      ./images/tablet/rome-tour@2x.webp 2x
-                    "
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/tablet/rome-tour.jpg   1x,
-                      ./images/tablet/rome-tour@2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                    type="image/jpeg"
-                  />
-                    <source
                       srcset="
-                        ./images/mobile/rome-tour.webp    1x,
-                        ./images/mobile/rome-tour@2x.webp 2x
+                        ./images/desctop/trip1-desc.webp    1x,
+                        ./images/desctop/trip1-desc@2x.webp 2x
                       "
-                      media="(max-width: 767px)"
+                      media="(min-width: 1151px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/mobile/rome.jpg    1x,
-                        ./images/mobile/rome@2x.jpg 2x
+                        ./images/desctop/trip1-desc.jpg    1x,
+                        ./images/desctop/trip2-desc@2x.jpg 2x
                       "
-                      media="(max-width: 767px)"
+                      media="(min-width: 1151px)"
                       type="image/jpeg"
                     />
-
-                    <img src="./images/mobile/rome.jpg" alt="Rome, Coliseum" />
-                  </picture>
-                </div>
-                <div class="trip-card__meta">
-                  <div class="trip-card__price">
-                    <p class="trip-card__guide">Guided Tour</p>
-                    <p>&#8364;99/Day</p>
-                  </div>
-
-                  <h3 class="trip-card__name">Rome City Tour</h3>
-                  <div class="rate-container">
-                    <div class="raiting">
-                      <button class="raiting__btn">
-                        <svg class="star-icon" width="24" height="24">
-                          <use href="./images/icons/icons.svg#star"></use>
-                        </svg></button
-                      ><button class="raiting__btn">
-                        <svg class="star-icon" width="24" height="24">
-                          <use href="./images/icons/icons.svg#star"></use>
-                        </svg></button
-                      ><button class="raiting__btn">
-                        <svg class="star-icon" width="24" height="24">
-                          <use href="./images/icons/icons.svg#star"></use>
-                        </svg></button
-                      ><button class="raiting__btn">
-                        <svg class="star-icon" width="24" height="24">
-                          <use href="./images/icons/icons.svg#star"></use>
-                        </svg></button
-                      ><button class="raiting__btn">
-                        <svg class="star-icon" width="24" height="24">
-                          <use href="./images/icons/icons.svg#star"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <p class="trip-card__days">7 Days tour</p>
-                  </div>
-                </div>
-              </a>
-            </article>
-          </li>
-          <li class="trips-list__item">
-            <article class="trip-card">
-              <a href="#">
-                <div class="trip-card__thumb">
-                  <div class="trip-card__overlay"></div>
-                  <picture>
-                    <source
-                    srcset="
-                      ./images/tablet/paris-tour.webp   1x,
-                      ./images/tablet/paris-tour@2x.webp 2x
-                    "
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/tablet/paris-tour.jpg   1x,
-                      ./images/tablet/paris-tour@2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                    type="image/jpeg"
-                  />
                     <source
                       srcset="
-                        ./images/mobile/paris-tour.webp    1x,
-                        ./images/mobile/paris-tour@2x.webp 2x
+                        ./images/tablet/budapesht-tour.webp   1x,
+                        ./images/tablet/budapesht-tour2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/budapesht-tour.jpg   1x,
+                        ./images/tablet/budapesht-tour2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/budapesht-tour.webp    1x,
+                        ./images/mobile/budapesht-tour@2x.webp 2x
                       "
                       media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/mobile/paris-tour.jpg    1x,
-                        ./images/mobile/paris-tour@2x.jpg 2x
+                        ./images/mobile/budapesht-tour.jpg    1x,
+                        ./images/mobile/budapesht-tour@2x.jpg 2x
                       "
                       media="(max-width: 767px)"
                       type="image/jpeg"
                     />
 
                     <img
-                      src="./images/mobile/paris-tour.jpg"
-                      alt="France, Paris, Efel tower"
+                      src="./images/mobile/budapesht-tour.jpg"
+                      alt="Budapest City"
                     />
                   </picture>
                 </div>
@@ -896,7 +981,7 @@
                     <p>&#8364;99/Day</p>
                   </div>
 
-                  <h3 class="trip-card__name">Paris City Tour</h3>
+                  <h3 class="trip-card__name">Budapest City Tour</h3>
                   <div class="rate-container">
                     <div class="raiting">
                       <button class="raiting__btn">
@@ -934,21 +1019,37 @@
                   <div class="trip-card__overlay"></div>
                   <picture>
                     <source
-                    srcset="
-                      ./images/tablet/barcelona-tour.webp  1x,
-                      ./images/tablet/barcelona-tour@2x.webp 2x
-                    "
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/tablet/barcelona-tour.jpg   1x,
-                      ./images/tablet/barcelona-tour@2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                    type="image/jpeg"
-                  />
+                      srcset="
+                        ./images/desctop/trip2-desc.webp    1x,
+                        ./images/desctop/trip2-desc@2x.webp 2x
+                      "
+                      media="(min-width: 1151px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/desctop/trip2-desc.jpg    1x,
+                        ./images/desctop/trip2-desc@2x.jpg 2x
+                      "
+                      media="(min-width: 1151px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/barcelona-tour.webp    1x,
+                        ./images/tablet/barcelona-tour@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/barcelona-tour.jpg    1x,
+                        ./images/tablet/barcelona-tour@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
                     <source
                       srcset="
                         ./images/mobile/barcelona-tour.webp    1x,
@@ -1016,41 +1117,57 @@
                   <div class="trip-card__overlay"></div>
                   <picture>
                     <source
-                    srcset="
-                      ./images/tablet/budapesht-tour.webp  1x,
-                      ./images/tablet/budapesht-tour2x.webp 2x
-                    "
-                    media="(min-width: 768px)"
-                    type="image/webp"
-                  />
-                  <source
-                    srcset="
-                      ./images/tablet/budapesht-tour.jpg   1x,
-                      ./images/tablet/budapesht-tour2x.jpg 2x
-                    "
-                    media="(min-width: 768px)"
-                    type="image/jpeg"
-                  />
+                      srcset="
+                        ./images/desctop/trip3-desc.webp    1x,
+                        ./images/desctop/trip3-desc@2x.webp 2x
+                      "
+                      media="(min-width: 1151px)"
+                      type="image/webp"
+                    />
                     <source
                       srcset="
-                        ./images/mobile/budapesht-tour.webp    1x,
-                        ./images/mobile/budapesht-tour@2x.webp 2x
+                        ./images/desctop/trip3-desc.jpg    1x,
+                        ./images/desctop/trip3-desc@2x.jpg 2x
+                      "
+                      media="(min-width: 1151px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/paris-tour.webp    1x,
+                        ./images/tablet/paris-tour@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/paris-tour.jpg    1x,
+                        ./images/tablet/paris-tour@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/paris-tour.webp    1x,
+                        ./images/mobile/paris-tour@2x.webp 2x
                       "
                       media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/mobile/budapesht-tour.jpg    1x,
-                        ./images/mobile/budapesht-tour@2x.jpg 2x
+                        ./images/mobile/paris-tour.jpg    1x,
+                        ./images/mobile/paris-tour@2x.jpg 2x
                       "
                       media="(max-width: 767px)"
                       type="image/jpeg"
                     />
 
                     <img
-                      src="./images/mobile/budapesht-tour.jpg"
-                      alt="Budapest City"
+                      src="./images/mobile/paris-tour.jpg"
+                      alt="France, Paris, Efel tower"
                     />
                   </picture>
                 </div>
@@ -1060,7 +1177,103 @@
                     <p>&#8364;99/Day</p>
                   </div>
 
-                  <h3 class="trip-card__name">Budapest City Tour</h3>
+                  <h3 class="trip-card__name">Paris City Tour</h3>
+                  <div class="rate-container">
+                    <div class="raiting">
+                      <button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg></button
+                      ><button class="raiting__btn">
+                        <svg class="star-icon" width="24" height="24">
+                          <use href="./images/icons/icons.svg#star"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="trip-card__days">7 Days tour</p>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </li>
+          <li class="trips-list__item">
+            <article class="trip-card">
+              <a href="#">
+                <div class="trip-card__thumb">
+                  <div class="trip-card__overlay"></div>
+
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/desctop/trip4-desc.webp    1x,
+                        ./images/desctop/trip4-desc@2x.webp 2x
+                      "
+                      media="(min-width: 1151px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/desctop/trip4-desc.jpg    1x,
+                        ./images/desctop/trip4-desc@2x.jpg 2x
+                      "
+                      media="(min-width: 1151px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/rome-tour.webp    1x,
+                        ./images/tablet/rome-tour@2x.webp 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/tablet/rome-tour.jpg    1x,
+                        ./images/tablet/rome-tour@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpeg"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/rome-tour.webp    1x,
+                        ./images/mobile/rome-tour@2x.webp 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/mobile/rome.jpg    1x,
+                        ./images/mobile/rome@2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/jpeg"
+                    />
+
+                    <img src="./images/mobile/rome.jpg" alt="Rome, Coliseum" />
+                  </picture>
+                </div>
+                <div class="trip-card__meta">
+                  <div class="trip-card__price">
+                    <p class="trip-card__guide">Guided Tour</p>
+                    <p>&#8364;99/Day</p>
+                  </div>
+
+                  <h3 class="trip-card__name">Rome City Tour</h3>
                   <div class="rate-container">
                     <div class="raiting">
                       <button class="raiting__btn">
@@ -1096,24 +1309,42 @@
 
       <section class="galery container">
         <h2 class="galery__title">Destination Gallery</h2>
-        <p class="galery__descr">Our photo gallery on trip</p>
-        <div class="slide-buttons">
-          <button class="btn-prev" type="button">
-            <svg class="icon-left" width="60" height="60">
-              <use href="./images/icons/icons.svg#slide-left" />
-            </svg>
-          </button>
-          <button class="btn-next" type="button">
-            <svg class="icon-right" width="60" height="60">
-              <use href="./images/icons/icons.svg#slide-right" />
-            </svg>
-          </button>
+        <div class="desctop-slide-btn-wrap">
+          <p class="galery__descr">Our photo gallery on trip</p>
+          <div class="slide-buttons">
+            <button class="btn-prev" type="button">
+              <svg class="icon-left" width="60" height="60">
+                <use href="./images/icons/icons.svg#slide-left" />
+              </svg>
+            </button>
+            <button class="btn-next" type="button">
+              <svg class="icon-right" width="60" height="60">
+                <use href="./images/icons/icons.svg#slide-right" />
+              </svg>
+            </button>
+          </div>
         </div>
         <ul class="galery-list">
           <li class="galery-list__item">
             <div class="galery-list__thumb">
               <div class="galery-list__overlay"></div>
               <picture>
+                <source
+                  srcset="
+                    ./images/desctop/photo1-desc.webp    1x,
+                    ./images/desctop/photo1-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/photo1-desc.jpg    1x,
+                    ./images/desctop/photo1-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/jpeg"
+                />
                 <source
                   srcset="
                     ./images/tablet/photo1.webp    1x,
@@ -1124,7 +1355,7 @@
                 />
                 <source
                   srcset="
-                    ./images/tablet/photo1.jpg   1x,
+                    ./images/tablet/photo1.jpg    1x,
                     ./images/tablet/photo1@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
@@ -1160,7 +1391,23 @@
               <picture>
                 <source
                   srcset="
-                    ./images/tablet/photo2.webp   1x,
+                    ./images/desctop/photo2-desc.webp    1x,
+                    ./images/desctop/photo2-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/photo2-desc.jpg    1x,
+                    ./images/desctop/photo2-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo2.webp    1x,
                     ./images/tablet/photo2@2x.webp 2x
                   "
                   media="(min-width: 768px)"
@@ -1168,7 +1415,7 @@
                 />
                 <source
                   srcset="
-                    ./images/tablet/photo2.jpg   1x,
+                    ./images/tablet/photo2.jpg    1x,
                     ./images/tablet/photo2@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
@@ -1204,7 +1451,23 @@
               <picture>
                 <source
                   srcset="
-                    ./images/tablet/photo3.webp   1x,
+                    ./images/desctop/photo3-desc.webp    1x,
+                    ./images/desctop/photo3-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/photo3-desc.jpg    1x,
+                    ./images/desctop/photo3-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo3.webp    1x,
                     ./images/tablet/photo3@2x.webp 2x
                   "
                   media="(min-width: 768px)"
@@ -1212,7 +1475,7 @@
                 />
                 <source
                   srcset="
-                    ./images/tablet/photo3.jpg   1x,
+                    ./images/tablet/photo3.jpg    1x,
                     ./images/tablet/photo3@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
@@ -1248,7 +1511,23 @@
               <picture>
                 <source
                   srcset="
-                    ./images/tablet/photo4.webp   1x,
+                    ./images/desctop/photo4-desc.webp    1x,
+                    ./images/desctop/photo4-desc@2x.webp 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desctop/photo4-desc.jpg    1x,
+                    ./images/desctop/photo4-desc@2x.jpg 2x
+                  "
+                  media="(min-width: 1151px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/photo4.webp    1x,
                     ./images/tablet/photo4@2x.webp 2x
                   "
                   media="(min-width: 768px)"
@@ -1256,7 +1535,7 @@
                 />
                 <source
                   srcset="
-                    ./images/tablet/photo4.jpg   1x,
+                    ./images/tablet/photo4.jpg    1x,
                     ./images/tablet/photo4@2x.jpg 2x
                   "
                   media="(min-width: 768px)"
@@ -1306,18 +1585,6 @@
         <p class="experience__descr">
           Here some awesome feedback from our travelers
         </p>
-        <div class="slide-buttons">
-          <button class="btn-prev" type="button">
-            <svg class="icon-left" width="60" height="60">
-              <use href="./images/icons/icons.svg#slide-left" />
-            </svg>
-          </button>
-          <button class="btn-next" type="button">
-            <svg class="icon-right" width="60" height="60">
-              <use href="./images/icons/icons.svg#slide-right" />
-            </svg>
-          </button>
-        </div>
         <ul class="expirience-list">
           <li class="expirience-list__item">
             <article class="feedback">
@@ -1491,7 +1758,7 @@
             </article>
           </li>
         </ul>
-        <div class="slide-buttons--mobile">
+        <div class="feedback-slides slide-buttons--mobile">
           <button class="btn-prev" type="button">
             <svg class="icon-left" width="60" height="60">
               <use href="./images/icons/icons.svg#slide-left" />
@@ -1509,29 +1776,32 @@
         <div class="form-container">
           <h2 class="subscribe__title">Our Newsletter</h2>
           <form>
-            <label class="subscribe__label" for="email"
-              >Email</label>
+            <label class="subscribe__label" for="email">Email</label>
+            <div class="desctop-form-wrap">
               <input
-              class="subscribe__input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email"
-          />
-            <button class="subscribe__btn" type="submit">Subscribe</button>
+                class="subscribe__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+              />
+              <button class="subscribe__btn" type="submit">Subscribe</button>
+            </div>
           </form>
         </div>
       </section>
     </main>
     <footer class="footer container">
-      <a class="footer__logo" class="logo" href="/">
-        <svg class="logo__icon" width="234" height="45">
-          <use href="./images/icons/icons.svg#logo"></use>
-        </svg>
-      </a>
-      <p class="footer__copirating">
-        Copyright &copy; Travellian 2020 All rights reserved
-      </p>
+      <div>
+        <a class="footer__logo logo" href="/">
+          <svg class="logo__icon--footer" width="234" height="45">
+            <use href="./images/icons/icons.svg#logo"></use>
+          </svg>
+        </a>
+        <p class="footer__copirating">
+          Copyright &copy; Travellian 2020 All rights reserved
+        </p>
+      </div>
       <nav>
         <h3 class="footer__title">Menu</h3>
         <ul class="footer-menu">
