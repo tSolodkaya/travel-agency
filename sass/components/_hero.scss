@@ -30,6 +30,7 @@
 
 .pagination {
   display: none;
+
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     position: absolute;
     right: 20px;

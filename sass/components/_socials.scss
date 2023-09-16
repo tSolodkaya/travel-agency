@@ -3,7 +3,9 @@
   display: block;
 
   transition: fill 250ms $transition-function;
-  &:hover {
+
+  &:hover,
+  &:focus {
     fill: $primary-color;
   }
 }

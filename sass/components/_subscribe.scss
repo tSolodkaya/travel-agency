@@ -42,11 +42,11 @@
 
 .subscribe__title {
   color: $text-color-paragraph;
+  margin-bottom: 0;
 
   @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
     margin-bottom: 60px;
   }
-  margin-bottom: 0;
 }
 
 .subscribe__label {
@@ -85,6 +85,7 @@
     align-items: flex-end;
   }
 }
+
 .subscribe__btn {
   padding: 24px 0;
   width: 100%;
@@ -96,9 +97,11 @@
   border-radius: 12px;
   transition: box-shadow 250ms $transition-function;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: $btn-hover-shadow;
   }
+
   @media screen and (min-width: map-get($breakpoints, "tablet")) {
     max-width: 160px;
     padding: 24px 0;

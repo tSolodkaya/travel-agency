@@ -5,6 +5,7 @@
     padding-bottom: 0;
   }
 }
+
 .trips__title {
   @extend %section-title;
 }
@@ -12,12 +13,19 @@
 .trips__descr {
   @extend %section-description;
   margin-bottom: 32px;
+
   @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
     margin-bottom: 0;
   }
 }
 
 .trips__link {
+  position: relative;
+  z-index: 2;
+
+  padding: 20px;
+  display: inline-block;
+
   color: $text-color-light;
   font-family: $main-text-font;
   font-size: 18px;
@@ -25,10 +33,6 @@
   line-height: 1.2;
   border-radius: 12px;
   background: $primary-color;
-  padding: 20px;
-  display: inline-block;
-  position: relative;
-  z-index: 2;
 
   transition: box-shadow 250ms $transition-function;
 
@@ -39,10 +43,11 @@
 }
 
 .link-container {
+  position: relative;
+
   margin-left: 20px;
   margin-top: 20px;
   display: inline-block;
-  position: relative;
 
   @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
     margin: 0;
@@ -63,6 +68,7 @@
   &::after {
     content: "";
     display: block;
+
     position: absolute;
     right: -20px;
     bottom: -20px;
@@ -82,6 +88,7 @@
     gap: 32px;
   }
 }
+
 .trips-list__item {
   max-width: 288px;
   margin: 0 auto;
@@ -114,6 +121,7 @@
 .trip-card {
   @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
     transition: transform 250ms $transition-function;
+
     &:hover {
       transform: translateY(-40px);
     }

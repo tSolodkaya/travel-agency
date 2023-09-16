@@ -49,9 +49,7 @@
 .booking-form__input {
   display: block;
   width: 100%;
-  margin-top: 12px;
-
-  margin-bottom: 40px;
+  margin: 12px 0 40px 0;
   padding-bottom: 12px;
 
   &--margin {
@@ -98,7 +96,8 @@
 
   transition: box-shadow 250ms $transition-function;
 
-  &:hover {
+  &:hover,
+  &:focus {
     box-shadow: $box-shadow-hover-light;
   }
 

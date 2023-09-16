@@ -57,7 +57,8 @@
       margin-right: 32px;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       transform: translateY(-40px);
     }
   }
