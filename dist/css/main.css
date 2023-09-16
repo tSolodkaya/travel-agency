@@ -273,6 +273,12 @@ button {
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
 }
+@media screen and (min-width: 1152px) {
+  .menu__link:hover, .menu__link:focus {
+    -webkit-box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.1);
+            box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.1);
+  }
+}
 @media screen and (max-width: 1151px) {
   .menu__link {
     font-size: 30px;
@@ -344,8 +350,8 @@ button {
   }
 }
 .authentification__link:hover, .authentification__link:focus {
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.1);
+          box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.1);
 }
 
 .logo__icon,
@@ -589,8 +595,8 @@ button {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .booking-form__btn:hover {
-  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.1);
+          box-shadow: 0px 4px 4px 2px rgba(255, 255, 255, 0.1);
 }
 @media screen and (min-width: 768px) {
   .booking-form__btn {
@@ -745,6 +751,10 @@ button {
   width: 60px;
   height: 57px;
   border-radius: 12px;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-prev:hover,
 .btn-next:hover {
@@ -916,6 +926,14 @@ button {
   padding: 16px 24px;
   border: 1px solid #ff7757;
   border-radius: 12px;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.offer-card__details:hover, .offer-card__details:focus {
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (min-width: 768px) {
@@ -1016,10 +1034,17 @@ button {
   font-family: #767e86;
   font-size: 24px;
   line-height: 2.2;
+  display: inline;
 }
 
 .arrow-icon--post {
   fill: #ff7757;
+}
+
+@media screen and (min-width: 1152px) {
+  .trips {
+    padding-bottom: 0;
+  }
 }
 
 .trips__descr {
@@ -1043,8 +1068,12 @@ button {
   display: inline-block;
   position: relative;
   z-index: 2;
+  -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.trips__link:hover {
+.trips__link:hover, .trips__link:focus {
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }

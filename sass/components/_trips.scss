@@ -1,7 +1,10 @@
 .trips {
   @extend %section;
-}
 
+  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    padding-bottom: 0;
+  }
+}
 .trips__title {
   @extend %section-title;
 }
@@ -27,7 +30,10 @@
   position: relative;
   z-index: 2;
 
-  &:hover {
+  transition: box-shadow 250ms $transition-function;
+
+  &:hover,
+  &:focus {
     box-shadow: $btn-hover-shadow;
   }
 }

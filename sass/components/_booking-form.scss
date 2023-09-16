@@ -99,7 +99,7 @@
   transition: box-shadow 250ms $transition-function;
 
   &:hover {
-    box-shadow: $btn-hover-shadow;
+    box-shadow: $box-shadow-hover-light;
   }
 
   @media screen and (min-width: map-get($breakpoints, "tablet")) {

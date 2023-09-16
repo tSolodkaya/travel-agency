@@ -95,6 +95,11 @@
   &:hover,
   &:focus {
     box-shadow: $btn-hover-shadow;
+
+    @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+      box-shadow: $box-shadow-hover-light;
+    }
+
     border-radius: 6px;
   }
 
@@ -165,7 +170,7 @@
   }
   &:hover,
   &:focus {
-    box-shadow: $btn-hover-shadow;
+    box-shadow: $box-shadow-hover-light;
   }
 }
 
