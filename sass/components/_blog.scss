@@ -21,13 +21,13 @@
     max-width: 728px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     max-width: 100%;
   }
 }
 
 .post {
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -36,7 +36,7 @@
 }
 
 .blog-descr-wrap {
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     max-width: 528px;
     padding: 32px 0;
   }
@@ -46,7 +46,7 @@
   position: relative;
   margin-bottom: 32px;
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     width: 528px;
     margin-bottom: 0;
   }

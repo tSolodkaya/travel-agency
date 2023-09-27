@@ -9,7 +9,7 @@
 .destinations__descr {
   @extend %section-description;
 
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     max-width: 884px;
   }
 }
@@ -17,7 +17,7 @@
 .destination-list {
   width: 288px;
   margin: 0 auto;
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     margin-bottom: 100px;
   }
 
@@ -25,7 +25,7 @@
     width: 728px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     width: 1058px;
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +40,7 @@
     max-width: 728px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     max-width: 497px;
   }
 

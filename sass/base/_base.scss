@@ -60,7 +60,7 @@ button {
     padding: 0 20px 0px 20px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     max-width: 1152px;
     margin: 0 auto;
     padding: 0 32px 0px 32px;

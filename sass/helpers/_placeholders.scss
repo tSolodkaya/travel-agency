@@ -5,7 +5,7 @@
     padding: 80px 20px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     padding: 100px 32px;
   }
 }
@@ -32,7 +32,7 @@
     font-size: 54px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     font-size: 64px;
   }
 }
@@ -45,7 +45,7 @@
     font-size: 20px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     display: inline-block;
     max-width: 884px;
     font-size: 24px;

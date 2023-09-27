@@ -7,7 +7,7 @@
     padding-top: 100px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -23,7 +23,7 @@
 .footer__copirating {
   font-size: 14px;
 
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     margin-bottom: 60px;
   }
 }
@@ -37,7 +37,7 @@
 
 .footer-menu,
 .footer-info {
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     margin-bottom: 60px;
   }
 }

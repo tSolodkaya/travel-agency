@@ -9,7 +9,7 @@
     font-size: 54px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     font-size: 64px;
   }
 }
@@ -22,7 +22,7 @@
     font-size: 20px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     font-size: 24px;
     margin-bottom: 140px;
   }

@@ -8,7 +8,7 @@
     background-image: url("../../images/tablet/hero-768@2x.jpg");
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     background-image: $hero-image-gradient,
       url("../../images/desctop/hero-1152.jpg");
 
@@ -25,7 +25,7 @@
 
   padding-bottom: 100px;
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     padding-bottom: 150px;
   }
 }
@@ -39,7 +39,7 @@
     padding: 24px 32px 24px 32px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +48,7 @@
 }
 
 .menu-container {
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     display: none;
     position: absolute;
     z-index: 2;
@@ -64,7 +64,7 @@
     }
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +72,7 @@
 }
 
 .menu-button {
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     display: none;
   }
 }
@@ -91,7 +91,7 @@
 }
 
 .menu {
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
@@ -106,14 +106,14 @@
   &:focus {
     box-shadow: $btn-hover-shadow;
 
-    @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
       box-shadow: $box-shadow-hover-light;
     }
 
     border-radius: 6px;
   }
 
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     font-size: 30px;
 
     &--active {
@@ -121,7 +121,7 @@
     }
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     color: $text-color-light;
 
     &--active::after {
@@ -136,7 +136,7 @@
 }
 
 .menu__item {
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     &:not(:last-child) {
       margin-bottom: 16px;
     }
@@ -144,7 +144,7 @@
 }
 
 .navigation {
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     margin-bottom: 30px;
   }
 }
@@ -153,7 +153,7 @@
   display: flex;
   align-items: center;
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     margin-left: 75px;
   }
 }
@@ -169,13 +169,13 @@
     margin-left: 36px;
     background-color: $primary-color;
     color: $text-color-light;
-    @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
       margin-left: 0;
     }
   }
 
   &--login {
-    @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+    @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
       border-color: transparent;
       color: $text-color-light;
     }

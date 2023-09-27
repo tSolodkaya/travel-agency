@@ -1,5 +1,5 @@
 .subscribe {
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     transform: translateY(50%);
   }
 }
@@ -28,7 +28,7 @@
     padding: 40px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     position: relative;
 
     max-width: 1080px;
@@ -44,7 +44,7 @@
   color: $text-color-paragraph;
   margin-bottom: 0;
 
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     margin-bottom: 60px;
   }
 }
@@ -74,13 +74,13 @@
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     width: 378px;
   }
 }
 
 .desctop-form-wrap {
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     display: flex;
     align-items: flex-end;
   }

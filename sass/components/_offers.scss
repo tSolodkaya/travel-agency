@@ -21,7 +21,7 @@
     text-align: end;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     margin-bottom: 0px;
     max-width: 884px;
   }
@@ -37,7 +37,7 @@
     width: 728px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     width: 1087px;
     display: flex;
     justify-content: center;
@@ -59,7 +59,7 @@
     max-width: 728px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     max-width: 342px;
   }
 }

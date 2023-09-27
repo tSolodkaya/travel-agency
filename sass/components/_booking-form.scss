@@ -10,7 +10,7 @@
     border-radius: 0 16px 16px 0;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     transform: translateX(-30px);
     max-width: 1056px;
     align-items: center;
@@ -34,7 +34,7 @@
     padding: 20px 100px 20px 32px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     padding: 0 0 0 32px;
   }
 }
@@ -107,7 +107,7 @@
     border-radius: 0 16px 16px 0;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     padding: 40px 20px;
     margin-left: auto;
   }

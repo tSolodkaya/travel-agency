@@ -9,7 +9,7 @@
 .galery__descr {
   @extend %section-description;
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     margin-bottom: 0;
   }
 }
@@ -23,7 +23,7 @@
     width: 728px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     width: 1088px;
     margin-bottom: 0;
     display: flex;
@@ -37,7 +37,7 @@
   max-width: 288px;
   margin: 0 auto;
 
-  @media screen and (max-width: map-get($breakpoints, "to-desctop-s")) {
+  @media screen and (max-width: map-get($breakpoints, "to-desktop-s")) {
     &:not(:last-child) {
       margin-bottom: 32px;
     }
@@ -47,7 +47,7 @@
     max-width: 728px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     cursor: pointer;
     padding-top: 40px;
     max-width: 248px;

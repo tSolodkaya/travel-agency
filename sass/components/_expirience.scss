@@ -1,7 +1,7 @@
 .expirience {
   @extend %section;
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     padding-bottom: 0;
   }
 }
@@ -14,7 +14,7 @@
   @extend %section-description;
   margin-bottom: 100px;
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     margin-bottom: 160px;
   }
 }
@@ -28,7 +28,7 @@
     width: 420px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     width: 100%;
     margin-bottom: 160px;
     display: flex;
@@ -52,7 +52,7 @@
     max-width: 420px;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     max-width: 500px;
     &:not(:last-child) {
       margin-right: 32px;
@@ -89,7 +89,7 @@
 }
 
 .feedback-slides {
-  @media screen and (min-width: map-get($breakpoints, "desctop-s")) {
+  @media screen and (min-width: map-get($breakpoints, "desktop-s")) {
     &.slide-buttons--mobile {
       display: block;
       text-align: end;
